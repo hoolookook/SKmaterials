@@ -1,0 +1,109 @@
+@import "../base/commons.scss";
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  .deepMenuOn {
+    position: absolute;
+    top: 100px;
+    height: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transition: max-height 0.35s ease;
+    overflow: hidden;
+  }
+  .headerWrap {
+    width: 1170px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    .logo {
+      float: left;
+      padding: 20px 0 36px;
+      a {
+        img {
+          opacity: 1;
+          width: 364px;
+          height: 54px;
+        }
+      }
+    }
+    .navWrap {
+      float: right;
+      .nav {
+        float: left;
+        padding: 50px 18px 45px;
+
+        > a {
+          font-weight: bold;
+          font-size: 18px;
+          color: #fff;
+          padding: 45px 0 40px;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: #000;
+          }
+          &:hover::after {
+            width: 100%;
+            transition: width 0.25s linear;
+          }
+        }
+      }
+      .mtFam,
+      .mtLife {
+        .FamDeepMenu,
+        .LifeDeepMenu {
+          position: absolute;
+          overflow: hidden;
+          top: 110px;
+          transform: translateX(-50%);
+          // display: none;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+          li {
+            float: left;
+            a {
+              font-size: 16px;
+              font-weight: bold;
+            }
+          }
+        }
+        .FamDeepMenu {
+          left: 67%;
+          width: 1440px;
+          li {
+            padding: 35px 16px 52px;
+          }
+        }
+        .LifeDeepMenu {
+          left: 82%;
+          width: 210px;
+          li {
+            padding: 35px 12px 52px;
+          }
+        }
+        &:hover .FamDeepMenu,
+        &:hover .LifeDeepMenu {
+          // display: block;
+          opacity: 1;
+        }
+        &:hover .FamDeepMenu a,
+        &:hover .LifeDeepMenu a {
+        }
+      }
+    }
+  }
+}
