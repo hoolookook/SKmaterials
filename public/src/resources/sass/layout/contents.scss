@@ -26,6 +26,21 @@
         min-height: 100%;
       }
     }
+    .videoTitle {
+      max-width: 1170px;
+      width: 100%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      text-align: left;
+
+      h2 {
+        font-size: 76px;
+        color: white;
+        font-weight: 600;
+      }
+    }
   }
   .dropDownSection {
     position: absolute;
