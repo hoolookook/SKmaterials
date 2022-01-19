@@ -13,6 +13,12 @@
     <!--js 편집 끝나면 build로 다시 바꿔 -->
     <script src="/public/src/resources/js/lib/main.js" defer></script>
 
+    <!-- slick -->
+    <script src="/public/src/resources/js/lib/slick.js"></script>
+    
+                    
+
+
     <!-- css -->
     <link rel="stylesheet" href="/public/build/resources/css/base/style.css">
     
@@ -59,6 +65,37 @@
     </div>
 </section>
     <section id="contents">
+    <div class="videoSection">
+        <div class="FrontVideo one">
+            <video autoplay="autoplay" muted="muted" loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+        </div>
+        <div class="FrontVideo two">
+            <video autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+        </div>
+        <div class="FrontVideo three">
+            <video autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+    <div class="dropDownSection">
+        <div class="container">
+            <select title="계열사 선택" class="dropDownBox familyGroup">
+                <option value="A1">패밀리사</option>
+                <option value="A2">SK머티리얼즈</option>
+                <option value="A3">SK트리켐</option>
+                <option value="A4">SK머티리얼즈 에어플러스</option>
+                <option value="A5">SK쇼와덴코</option>
+                <option value="A6">SK머티리얼즈 리뉴텍</option>
+                <option value="A7">SK머티리얼즈 퍼포먼스</option>
+                <option value="A7">SK머티리얼즈 제이앤씨</option>
+            </select>
+            <select title="채용 유형 선택" class="dropDownBox ">
+                <option value>채용유형</option>
+                <option value="B1">신입/인턴</option>
+                <option value="B2">경력</option>
+            </select>
+            <input type="직무를 입력해주세요." value="직무를 입력해주세요.">
+        </div>
+    </div>
 </section>
     <section id="footer">
 </section>

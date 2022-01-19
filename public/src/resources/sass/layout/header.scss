@@ -1,9 +1,11 @@
 @import "../base/commons.scss";
 
 #header {
-  position: relative;
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 110px;
+  z-index: 1;
   .deepMenuOn {
     position: absolute;
     top: 100px;

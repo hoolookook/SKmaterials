@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
   $("#header").mouseleave(function () {
     $("#header").removeClass("deepMenuOn").css({
-      "background-color": "red",
+      "background-color": "transparent",
     });
     $(".logo img").attr(
       "src",
@@ -46,5 +46,15 @@ $(document).ready(function () {
       height: "0px",
       transition: "height 0.35s ease",
     });
+  });
+});
+
+$(document).ready(function () {
+  $(".videoSection").slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
   });
 });
