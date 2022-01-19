@@ -9,6 +9,7 @@
 //   );
 // });
 
+// nav메뉴 hover
 $(document).ready(function () {
   var hovering = false;
   $("ul li").mouseenter(function () {
@@ -49,6 +50,7 @@ $(document).ready(function () {
   });
 });
 
+// slick option
 $(document).ready(function () {
   $(".videoSection").slick({
     dots: false,
@@ -58,3 +60,11 @@ $(document).ready(function () {
     cssEase: "linear",
   });
 });
+
+// 키누를때 value 지우기
+// $("input").on("keyup", function () {
+//   var valueDefault = "직무를 입력해주세요.";
+//   if (this.value.length == 0) {
+//     $("input").val(valueDefault);
+//   }
+// });

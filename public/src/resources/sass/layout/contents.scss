@@ -1,3 +1,10 @@
+@mixin commonFlex($flexF, $justifyC, $alignI) {
+  display: flex;
+  flex-flow: $flexF;
+  justify-content: $justifyC;
+  align-items: $alignI;
+}
+
 #contents {
   width: 100vw;
   height: 100vh;
@@ -29,13 +36,57 @@
     .container {
       min-width: 1170px;
       width: 100%;
-      height: 107px;
+      height: 130px;
       border-radius: 30px 30px 0 0;
       background-color: #4b4b4b;
+      //   @include commonFlex(column wrap, space-around, flex-start); 미디어쿼리때 세로줄
+      @include commonFlex(row wrap, center, center);
+      column-gap: 30px;
+
       select,
       input,
-      select.option {
+      select option {
+        width: 300px;
         font-size: 20px;
+        height: 55px;
+        border: 0;
+        font-weight: 600;
+        border-bottom: 1px solid #818181;
+      }
+      select {
+        background: transparent;
+        background-image: url(/public/src/resources/images/form-select-arrow-white.png);
+        background-repeat: no-repeat;
+        background-position-x: 92%;
+        background-position-y: 25px;
+        background-size: 16px 10px;
+        color: white;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        option {
+          color: #4b4b4b;
+        }
+      }
+      input {
+        background: transparent;
+        color: white;
+        &::placeholder {
+          color: white;
+        }
+      }
+      .searchBtn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        img {
+          max-width: 100%;
+          width: 100%;
+          border: 0;
+          border-style: none;
+        }
       }
     }
   }
