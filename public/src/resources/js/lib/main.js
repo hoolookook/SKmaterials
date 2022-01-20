@@ -16,10 +16,15 @@ $(document).ready(function () {
     $("#header").css({
       "background-color": "white",
     });
+
     $(".logo img").attr(
       "src",
-      "/public/src/resources/images/header-ci-black.png"
+      "/public/src/resources/images/icons/header-ci-black.png"
     );
+    $(".navWrap .nav .login").css({
+      "background-image":
+        "url(/public/src/resources/images/icons/nav-login-icon-black.png)",
+    });
     $(".navWrap .nav a").css({
       color: "black",
     });
@@ -30,8 +35,12 @@ $(document).ready(function () {
     });
     $(".logo img").attr(
       "src",
-      "/public/src/resources/images/header-ci-white.png"
+      "/public/src/resources/images/icons/header-ci-white.png"
     );
+    $(".navWrap .nav .login").css({
+      "background-image":
+        "url(/public/src/resources/images/icons/nav-login-icon-white.png)",
+    });
     $(".navWrap .nav a").css({
       color: "white",
     });
@@ -40,12 +49,14 @@ $(document).ready(function () {
     $(".deepMenuOn").css({
       height: "100px",
       transition: "height 0.35s ease",
+      "border-top": "1px solid #d9d9d9",
     });
   });
   $(".mtFam, .mtLife").mouseleave(function () {
     $(".deepMenuOn").css({
       height: "0px",
       transition: "height 0.35s ease",
+      "border-top": 0,
     });
   });
 });
