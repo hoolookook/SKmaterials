@@ -2,7 +2,9 @@
 
 #contents {
   @include WH(100vw, 100vh);
+
   .videoSection {
+    @include WH(100vw, 100vh);
     @include apsolutePos(0, 0, 0, 0, $transform: false);
     .FrontVideo {
       @include WH(100vw, 100vh);
