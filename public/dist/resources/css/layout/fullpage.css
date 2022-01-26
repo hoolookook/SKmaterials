@@ -1,0 +1,62 @@
+#fullpage {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#fullpage .cardSection {
+    overflow: hidden;
+    position: absolute;
+}
+
+#fullpage .cardSection .card {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#fullpage .cardSection .card img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    right: none;
+    bottom: none;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#fullpage .cardSection .card .titleBox {
+    position: absolute;
+    top: 50%;
+    right: none;
+    bottom: none;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#fullpage .cardSection .card .titleBox .smTitle,
+#fullpage .cardSection .card .titleBox .larTitle {
+    text-align: center;
+    font-weight: 600;
+}
+
+#fullpage .cardSection .card .titleBox .smTitle {
+    font-size: 20px;
+}
+
+#fullpage .cardSection .card .titleBox .larTitle {
+    font-size: 46px;
+}
+
+#fullpage .cardSection .section1,
+#fullpage .cardSection .section3,
+#fullpage .cardSection .section5 {
+    color: white;
+}

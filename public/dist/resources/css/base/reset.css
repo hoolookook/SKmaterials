@@ -93,6 +93,9 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ol,
@@ -126,6 +129,9 @@ section {
 
 body {
     line-height: 1;
+    overflow-x: hidden;
+    margin: 0 auto;
+    background-color: red;
 }
 
 ol,
