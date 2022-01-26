@@ -19,11 +19,11 @@ $(document).ready(function () {
 
     $(".logo img").attr(
       "src",
-      "../../resources/images/icons/header-ci-black.png"
+      "@@webRoot/resources/images/icons/header-ci-black.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(../../resources/images/icons/nav-login-icon-black.png)",
+        "url(@@webRoot/resources/images/icons/nav-login-icon-black.png)",
     });
     $(".navWrap .nav a").css({
       color: "black",
@@ -35,11 +35,11 @@ $(document).ready(function () {
     });
     $(".logo img").attr(
       "src",
-      "../../resources/images/icons/header-ci-white.png"
+      "@@webRoot/resources/images/icons/header-ci-white.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(../../resources/images/icons/nav-login-icon-white.png)",
+        "url(@@webRoot/resources/images/icons/nav-login-icon-white.png)",
     });
     $(".navWrap .nav a").css({
       color: "white",
