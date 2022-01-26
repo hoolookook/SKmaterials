@@ -12,6 +12,7 @@
 // nav메뉴 hover
 $(document).ready(function () {
   var hovering = false;
+  var webRoot = "./";
   $("ul li").mouseenter(function () {
     $("#header").css({
       "background-color": "white",
@@ -19,11 +20,11 @@ $(document).ready(function () {
 
     $(".logo img").attr(
       "src",
-      "@@webRoot/resources/images/icons/header-ci-black.png"
+      webRoot + "/resources/images/icons/header-ci-black.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(@@webRoot/resources/images/icons/nav-login-icon-black.png)",
+        webRoot + "url(/resources/images/icons/nav-login-icon-black.png)",
     });
     $(".navWrap .nav a").css({
       color: "black",
@@ -35,11 +36,11 @@ $(document).ready(function () {
     });
     $(".logo img").attr(
       "src",
-      "@@webRoot/resources/images/icons/header-ci-white.png"
+      webRoot + "/resources/images/icons/header-ci-white.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(@@webRoot/resources/images/icons/nav-login-icon-white.png)",
+        webRoot + "url(/resources/images/icons/nav-login-icon-white.png)",
     });
     $(".navWrap .nav a").css({
       color: "white",
