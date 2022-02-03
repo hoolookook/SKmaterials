@@ -1,18 +1,6 @@
-// $(document).ready(function () {
-//   $("ul li a").hover(
-//     function () {
-//       $("#header").css("background-color", "blue");
-//     },
-//     function () {
-//       $("#header").css("background-color", "red");
-//     }
-//   );
-// });
-
 // nav메뉴 hover
 $(document).ready(function () {
   var hovering = false;
-  var webRoot = "./";
   $("ul li").mouseenter(function () {
     $("#header").css({
       "background-color": "white",
@@ -20,11 +8,11 @@ $(document).ready(function () {
 
     $(".logo img").attr(
       "src",
-      webRoot + "/resources/images/icons/header-ci-black.png"
+      "/public/src/resources/images/icons/header-ci-black.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        webRoot + "url(/resources/images/icons/nav-login-icon-black.png)",
+        "url(/public/src/resources/images/icons/nav-login-icon-black.png)",
     });
     $(".navWrap .nav a").css({
       color: "black",
@@ -36,11 +24,11 @@ $(document).ready(function () {
     });
     $(".logo img").attr(
       "src",
-      webRoot + "/resources/images/icons/header-ci-white.png"
+      "/public/src/resources/images/icons/header-ci-white.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        webRoot + "url(/resources/images/icons/nav-login-icon-white.png)",
+        "url(/public/src/resources/images/icons/nav-login-icon-white.png)",
     });
     $(".navWrap .nav a").css({
       color: "white",
@@ -60,6 +48,26 @@ $(document).ready(function () {
       "border-top": 0,
     });
   });
+  // scroll event
+  $(window).scroll(function () {
+    console.log("현재 스크롤위치는" + $(window).scrollTop());
+    var scrollBool = $(window).scrollTop() >= 50 ? true : false;
+    if (scrollBool) {
+      $("#header").css({
+        "background-color": "white",
+      });
+      $("#fixed").css({
+        // display: "block",
+      });
+    } else {
+      $("#header").css({
+        "background-color": "transparent",
+      });
+      $("#fixed").css({
+        // display: "none",
+      });
+    }
+  });
 });
 
 // slick option
@@ -72,30 +80,3 @@ $(document).ready(function () {
     cssEase: "linear",
   });
 });
-
-// 키누를때 value 지우기
-// $("input").on("keyup", function () {
-//   var valueDefault = "직무를 입력해주세요.";
-//   if (this.value.length == 0) {
-//     $("input").val(valueDefault);
-//   }
-// });
-
-$footer = $("#footer");
-$win = $(window);
-var ipos = $footer.offset().top;
-var wpos, space, width;
-width = $footer.width();
-
-function h(e) {
-  wpos = $win.scrollTop();
-  space = $win.height() - $footer.height();
-  if (wpos + space > ipos) {
-    $footer.addClass("fixed");
-    $footer.width(width);
-  } else {
-    $footer.removeClass("fixed");
-  }
-}
-
-$(window).scroll(h);

@@ -1,6 +1,12 @@
+.fixed {
+    /* the class that will be applied */
+    position: fixed;
+    bottom: 0;
+}
+
 #header {
     width: 100%;
-    height: 100px;
+    height: 110px;
     position: absolute;
     top: 0;
     right: 0;
@@ -45,7 +51,7 @@
 
 #header .headerWrap .logo a img {
     width: 364px;
-    height: 54px;
+    height: 50px;
     opacity: 1;
 }
 

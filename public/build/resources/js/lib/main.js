@@ -48,6 +48,26 @@ $(document).ready(function () {
       "border-top": 0,
     });
   });
+  // scroll event
+  $(window).scroll(function () {
+    console.log("현재 스크롤위치는" + $(window).scrollTop());
+    var scrollBool = $(window).scrollTop() >= 50 ? true : false;
+    if (scrollBool) {
+      $("#header").css({
+        "background-color": "white",
+      });
+      $("#fixed").css({
+        // display: "block",
+      });
+    } else {
+      $("#header").css({
+        "background-color": "transparent",
+      });
+      $("#fixed").css({
+        // display: "none",
+      });
+    }
+  });
 });
 
 // slick option
@@ -59,9 +79,4 @@ $(document).ready(function () {
     fade: true,
     cssEase: "linear",
   });
-});
-
-// scroll event
-$(function () {
-  console.log("현재 스크롤 값은 " + $(window).scrollTop());
 });
