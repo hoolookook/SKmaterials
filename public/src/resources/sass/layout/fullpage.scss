@@ -4,12 +4,18 @@
   height: 100vh;
   position: relative;
   .cardSection {
-    overflow: hidden;
-    position: absolute;
+    // position: absolute;
+    // overflow: hidden;
+    flex-flow: column;
+    width: 100%;
+    display: flex;
     .card {
-      position: relative;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
       @include WH(100vw, 100vh);
       img {
+        height: 100%;
         @include MinWH(100%, 100%);
         @include apsolutePos(50%, none, none, 50%, $transform: false);
         transform: translate(-50%, -50%);

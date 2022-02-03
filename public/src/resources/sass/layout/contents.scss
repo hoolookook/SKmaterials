@@ -28,6 +28,7 @@
     }
   }
   .dropDownSection {
+    display: none;
     @include apsolutePos(none, none, 0, 50%, $transform: true);
     z-index: 1;
     .container {

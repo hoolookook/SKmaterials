@@ -1,0 +1,138 @@
+@import "../base/commons.scss";
+
+#fixed {
+  display: block;
+  position: fixed;
+  @include WH(auto, auto);
+  bottom: 0;
+  background-color: white;
+  left: 0;
+
+  .toTop {
+    @include WH(90px, auto);
+    @include apsolutePos(none, 0, 80px, none, false);
+    background-color: red;
+    transform: translate(-31px, 0px);
+    .select {
+      @include apsolutePos(5px, none, none, 0, false);
+    }
+    p {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+    }
+  }
+  .select {
+    @include WH(16px, 10px);
+    @include backgroundRS(12px 7px);
+    background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
+  }
+  .recruitWrap {
+    max-width: 1170px;
+    height: 50px;
+    @include commonFlex(none, space-between, center);
+    margin: 15px auto;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .recruit {
+      letter-spacing: -0.09em;
+      margin-right: 17px;
+      strong {
+        font-weight: 600;
+        vertical-align: text-bottom;
+      }
+    }
+    .leftArea {
+      .head {
+        position: relative;
+        font-size: 26px;
+        padding-right: 40px;
+        border-right: 1px solid #cccccc;
+        margin-right: 40px;
+      }
+      li {
+        .recruit {
+          line-height: 26px;
+          &:not(.head) {
+            font-size: 18px;
+          }
+        }
+        &:last-child {
+          padding-left: 45px;
+        }
+      }
+    }
+    .rightAria {
+      li {
+        @include WH(240px, 50px);
+        line-height: 50px;
+        border-radius: 45px;
+        text-align: center;
+        border-color: #4b4b4b;
+        background-color: #4b4b4b;
+        &:hover .recruit {
+          padding-right: 7px;
+          transition: all 0.2s;
+        }
+        &:hover .recruit .ring {
+          animation: ringMyBell 1s;
+        }
+        cursor: pointer;
+        .recruit {
+          font-size: 16px;
+          color: white;
+          position: relative;
+          transition: all 0.2s;
+
+          .select {
+            @include apsolutePos(5px, -27px, none, none, false);
+            transform: rotateZ(-90deg);
+            color: white;
+            -webkit-appearance: none;
+          }
+          .ring {
+            @include WH(14px, 17px);
+            @include apsolutePos(-9px, -20px, none, none, false);
+            // background-color: red;
+            -webkit-appearance: none;
+            color: white;
+            .insideRing {
+              @include WH(14px, 17px);
+              @include apsolutePos(12px, 0, none, none, false);
+              @include backgroundRS(14px 17px);
+              background-image: url(/public/src/resources/images/icons/label-ico-alarm-white.png);
+            }
+          }
+        }
+        &:last-child {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ringMyBell {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  10% {
+    transform: rotateZ(-10deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  30% {
+    transform: rotateZ(-10deg);
+  }
+  40% {
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}

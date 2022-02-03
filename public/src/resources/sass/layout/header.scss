@@ -1,7 +1,7 @@
 @import "../base/commons.scss";
 
 #header {
-  @include WH(100%, 100px);
+  @include WH(100%, 110px);
   @include apsolutePos(0, 0, 0, 0, $transform: false);
   z-index: 1;
   .deepMenuOn {
@@ -20,7 +20,7 @@
       padding: 20px 0 36px;
       a {
         img {
-          @include WH(364px, 54px);
+          @include WH(364px, 50px);
           opacity: 1;
         }
       }

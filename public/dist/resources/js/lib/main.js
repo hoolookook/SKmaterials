@@ -12,6 +12,7 @@
 // nav메뉴 hover
 $(document).ready(function () {
   var hovering = false;
+  var webRoot = "./";
   $("ul li").mouseenter(function () {
     $("#header").css({
       "background-color": "white",
@@ -19,11 +20,11 @@ $(document).ready(function () {
 
     $(".logo img").attr(
       "src",
-      "/public/src/resources/images/icons/header-ci-black.png"
+      webRoot + "/resources/images/icons/header-ci-black.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(/public/src/resources/images/icons/nav-login-icon-black.png)",
+        webRoot + "url(/resources/images/icons/nav-login-icon-black.png)",
     });
     $(".navWrap .nav a").css({
       color: "black",
@@ -35,11 +36,11 @@ $(document).ready(function () {
     });
     $(".logo img").attr(
       "src",
-      "/public/src/resources/images/icons/header-ci-white.png"
+      webRoot + "/resources/images/icons/header-ci-white.png"
     );
     $(".navWrap .nav .login").css({
       "background-image":
-        "url(/public/src/resources/images/icons/nav-login-icon-white.png)",
+        webRoot + "url(/resources/images/icons/nav-login-icon-white.png)",
     });
     $(".navWrap .nav a").css({
       color: "white",
@@ -79,3 +80,22 @@ $(document).ready(function () {
 //     $("input").val(valueDefault);
 //   }
 // });
+
+$footer = $("#footer");
+$win = $(window);
+var ipos = $footer.offset().top;
+var wpos, space, width;
+width = $footer.width();
+
+function h(e) {
+  wpos = $win.scrollTop();
+  space = $win.height() - $footer.height();
+  if (wpos + space > ipos) {
+    $footer.addClass("fixed");
+    $footer.width(width);
+  } else {
+    $footer.removeClass("fixed");
+  }
+}
+
+$(window).scroll(h);
