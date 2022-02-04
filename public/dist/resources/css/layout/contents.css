@@ -9,6 +9,64 @@
     height: 100vh;
 }
 
+#contents #playPause {
+    position: absolute;
+    top: none;
+    right: none;
+    bottom: 200px;
+    left: 50%;
+    -webkit-transform: translate(-357px);
+    -moz-transform: translate(-357px);
+    -ms-transform: translate(-357px);
+    transform: translate(-357px);
+    display: block;
+    z-index: 15;
+}
+
+#contents #playPause button {
+    margin: 0 7px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+#contents #playPause .play {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    -moz-background-size: 15px 15px;
+    background-size: 15px 15px;
+    background-image: url(../../images/icons/slider-play-icon-white.png);
+}
+
+#contents #playPause .pause {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    -moz-background-size: 15px 15px;
+    background-size: 15px 15px;
+    background-image: url(../../images/icons/slider-pause-icon-white.png);
+}
+
+#contents #custom-seekbar {
+    cursor: pointer;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: thin solid orange;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+    z-index: 5;
+}
+
+#contents #custom-seekbar span {
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 0px;
+}
+
 #contents .videoSection {
     width: 100vw;
     height: 100vh;
@@ -61,7 +119,7 @@
 }
 
 #contents .dropDownSection {
-    display: none;
+    display: block;
     position: absolute;
     top: none;
     right: none;
@@ -169,8 +227,6 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 0;
-    cursor: pointer;
 }
 
 #contents .dropDownSection .container .searchBtn img {

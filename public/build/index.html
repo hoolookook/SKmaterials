@@ -8,8 +8,10 @@
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- js -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- js --> 
     <!--js 편집 끝나면 build로 다시 바꿔 -->
     <script src="/public/src/resources/js/lib/main.js" defer></script>
 
@@ -65,23 +67,30 @@
     </div>
 </section>
     <section id="contents">
+    <div id="playPause">
+        <button class='play'></button> 
+        <button class='pause'></button> 
+    </div>
+    <div id="custom-seekbar">
+        <span></span>
+    </div>
     <div class="videoSection">
         <div class="FrontVideo one">
-            <video autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+            <video id="video" autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-01.mp4" type="video/mp4"></video>
 
             <div class="videoTitle">
                 <h2>행복한 소통</h2>
             </div>
         </div>
         <div class="FrontVideo two">
-            <video autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+            <video id="video" autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
 
             <div class="videoTitle">
                 <h2>각자의 방식으로<br>가장 자유롭게</h2>
             </div>
         </div>
         <div class="FrontVideo three">
-            <video autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-02.mp4" type="video/mp4"></video>
+            <video id="video" autoplay="autoplay" muted="muted"  loop="loop" src="/public/src/resources/images/movie/main-visual-mov-03.mp4" type="video/mp4"></video>
             <div class="videoTitle">
                 <h2>호기심, 탐구, 진리</h2>
             </div>
@@ -175,10 +184,10 @@
     
 </section>
     <section id="fixed">
-    <a class="toTop">
+    <button id="upicon" class="toTop">
         <i class="select"></i>
         <p>top</p>
-    </a>
+    </button>
     
     <div class="recruitWrap">
         <ul class="leftArea">
