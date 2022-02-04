@@ -124,33 +124,17 @@ $(document).ready(function () {
   var child = ".slick-dots li:nth-child(n)";
 
   var progressBar = '<div class="progressBar"><div class="line"></div></div>';
-  // function ClickAddPr(e) {
-  //   $(document).on("click", e, function () {
-  //     $(this).append(progressBar).not(this).removeClass("slick-active");
-  //     $(this).toggleClass("slick-active");
+  function ClickAddPr(e) {
+    $(document).on("click", e, function () {
+      $(this).append(progressBar).not(this).removeClass("slick-active");
+      $(this).toggleClass("slick-active");
 
-  //     // $(e).not(".slick-active").css("background", "red");
-  //     // $(e).not(".slick-active").not("button").empty();
-  //   });
-  // }
+      // $(e).not(".slick-active").css("background", "red");
+      // $(e).not(".slick-active").not("button").empty();
+    });
+  }
 
-  $(document).on("click", child, function () {
-    if ($(this).hasClass("slick-active")) {
-      not(this).removeClass("slick-active");
-    } else {
-      not(this).removeClass("slick-active");
-
-      $(this).addClass("slick-active");
-    }
-
-    if ($(".slick-active")) {
-      $(this).append(progressBar);
-    } else {
-      remove(".progressBar");
-    }
-  });
-
-  // ClickAddPr(child);
+  ClickAddPr(child);
 
   //
   // ClickAddPr(child);
@@ -161,5 +145,5 @@ $(document).ready(function () {
   //   click = false;
   // }
 
-  // $(".slick-active ").append(progressBar);
+  $(".slick-active ").append(progressBar);
 });
