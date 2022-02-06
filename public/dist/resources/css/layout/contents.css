@@ -29,6 +29,10 @@
     background-repeat: no-repeat;
 }
 
+#contents #playPause button:focus {
+    opacity: 1;
+}
+
 #contents #playPause .play {
     width: 15px;
     height: 15px;
@@ -36,6 +40,7 @@
     -moz-background-size: 15px 15px;
     background-size: 15px 15px;
     background-image: url(../../images/icons/slider-play-icon-white.png);
+    opacity: 1;
 }
 
 #contents #playPause .pause {
@@ -45,6 +50,7 @@
     -moz-background-size: 15px 15px;
     background-size: 15px 15px;
     background-image: url(../../images/icons/slider-pause-icon-white.png);
+    opacity: 0.5;
 }
 
 #contents #custom-seekbar {

@@ -90,6 +90,8 @@ $(document).ready(function () {
 });
 // slick & video option
 $(document).ready(function () {
+  var play = $("#playPause .play");
+  var pause = $("#playPause .pause");
   var $slider = $(".videoSection").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -103,63 +105,54 @@ $(document).ready(function () {
     autoplaySpeed: 15000,
   });
 
-  // video progress bar
-  // color 채우기
-  var vid = document.getElementById("video");
-  vid.ontimeupdate = function () {
-    var percentage = (vid.currentTime / vid.duration) * 100;
-    $("#custom-seekbar span").css("width", percentage + "%");
-  };
-  // 숫자 채우기
-  // var vid = document.getElementById("video");
-  // vid.ontimeupdate = function () {
-  //   myfunction();
-  // };
-  // function myfunction() {
-  //   document.getElementById("custom-seekbar").innerHTML = vid.currentTime;
-  // }
+  $(".play").on("click", function () {
+    $(pause).css("opacity", "0.2");
+    $(this).css("opacity", "1");
+    $(".videoSection").slick("slickPlay");
+    // $(this).css({ opacity: 1 });
+  });
+  $(".pause").on("click", function () {
+    $(play).css("opacity", "0.2");
+    $(this).css("opacity", "1");
+    $(".videoSection").slick("slickPause");
+    // $(this).css({ opacity: 1 });
+  });
 });
 // 그 외
 $(document).ready(function () {
-  var child = ".slick-dots li:nth-child(n)";
-
+  var chkClick = false;
   var progressBar = '<div class="progressBar"><div class="line"></div></div>';
-  // function ClickAddPr(e) {
-  //   $(document).on("click", e, function () {
-  //     $(this).append(progressBar).not(this).removeClass("slick-active");
-  //     $(this).toggleClass("slick-active");
+  var a = $(".slick-dots li:nth-child(1)");
+  var b = $(".slick-dots li:nth-child(2)");
+  var c = $(".slick-dots li:nth-child(3)");
 
-  //     // $(e).not(".slick-active").css("background", "red");
-  //     // $(e).not(".slick-active").not("button").empty();
-  //   });
-  // }
+  // init
+  $(".slick-dots li").append(progressBar);
+  $(".slick-dots li:nth-child(1) .progressBar").css({ display: "block" });
+  $(".slick-dots li:nth-child(2) .progressBar").css({ display: "none" });
+  $(".slick-dots li:nth-child(3) .progressBar").css({ display: "none" });
+  // if
+  if (!chkClick) {
+    clickEvt();
+  } else {
+    return false;
+  }
 
-  $(document).on("click", child, function () {
-    if ($(this).hasClass("slick-active")) {
-      not(this).removeClass("slick-active");
-    } else {
-      not(this).removeClass("slick-active");
-
-      $(this).addClass("slick-active");
-    }
-
-    if ($(".slick-active")) {
-      $(this).append(progressBar);
-    } else {
-      remove(".progressBar");
-    }
-  });
-
-  // ClickAddPr(child);
-
-  //
-  // ClickAddPr(child);
-  // if ($(child).hasClass("slick-active")) {
-  //   ClickAddPr(child);
-  //   click = true;
-  // } else {
-  //   click = false;
-  // }
-
-  // $(".slick-active ").append(progressBar);
+  function clickEvt() {
+    $(a).on("click", function () {
+      $(".slick-dots li:nth-child(1) .progressBar").css({ display: "block" });
+      $(".slick-dots li:nth-child(2) .progressBar").css({ display: "none" });
+      $(".slick-dots li:nth-child(3) .progressBar").css({ display: "none" });
+    });
+    $(b).on("click", function () {
+      $(".slick-dots li:nth-child(1) .progressBar").css({ display: "none" });
+      $(".slick-dots li:nth-child(2) .progressBar").css({ display: "block" });
+      $(".slick-dots li:nth-child(3) .progressBar").css({ display: "none" });
+    });
+    $(c).on("click", function () {
+      $(".slick-dots li:nth-child(1) .progressBar").css({ display: "none" });
+      $(".slick-dots li:nth-child(2) .progressBar").css({ display: "none" });
+      $(".slick-dots li:nth-child(3) .progressBar").css({ display: "block" });
+    });
+  }
 });

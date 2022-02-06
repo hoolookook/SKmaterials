@@ -12,16 +12,21 @@
       margin: 0 7px;
       background-color: transparent;
       background-repeat: no-repeat;
+      &:focus {
+        opacity: 1;
+      }
     }
     .play {
       @include WH(15px, 15px);
       @include backgroundRS(15px 15px);
       background-image: url(../../images/icons/slider-play-icon-white.png);
+      opacity: 1;
     }
     .pause {
       @include WH(15px, 15px);
       @include backgroundRS(15px 15px);
       background-image: url(../../images/icons/slider-pause-icon-white.png);
+      opacity: 0.5;
     }
   }
 
