@@ -3,6 +3,27 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  .smTitle,
+  .larTitle,
+  .midTitle {
+    text-align: center;
+    font-weight: 600;
+  }
+  .smTitle {
+    // font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+  .smGrey {
+    color: #999999;
+  }
+  .larTitle {
+    font-size: 2.875rem;
+    line-height: 1.4;
+  }
+  .midTitle {
+    font-size: 1.875rem;
+  }
   .cardSection {
     // position: absolute;
     // overflow: hidden;
@@ -22,17 +43,10 @@
       }
       .titleBox {
         @include apsolutePos(50%, none, none, 50%, $transform: false);
-        transform: translate(-50%, -50%);
-        .smTitle,
-        .larTitle {
-          text-align: center;
-          font-weight: 600;
-        }
-        .smTitle {
-          font-size: 20px;
-        }
-        .larTitle {
-          font-size: 46px;
+
+        transform: translate(-50%, -60%);
+        .padd {
+          padding-bottom: 40px;
         }
       }
     }
@@ -40,6 +54,71 @@
     .section3,
     .section5 {
       color: white;
+    }
+  }
+  .freeSection {
+    @include WH(100%, 100%);
+    .container {
+      padding: 160px 0;
+      .grow {
+        padding-top: 100px;
+        max-width: 1170px;
+        margin: 0 auto;
+        @include commonFlex(row, center, center);
+        .growBox {
+          position: relative;
+          @include WH(50%, 100%);
+          .circle {
+            position: relative;
+            padding-bottom: 100%;
+            width: 100%;
+            height: 0;
+            background-color: #f8f8f8;
+            border-radius: 100%;
+          }
+          .chart {
+            @include commonFlex(row, center, center);
+            @include apsolutePos(none, none, 0, 50%, false);
+            flex-wrap: nowrap;
+            // transform: translate(-50%, -50%);
+            .bar {
+              p {
+                text-align: center;
+              }
+              padding: 0 1.375rem;
+              .growBar {
+                margin: 20px auto;
+                @include WH(60px, 200px);
+                border-radius: 30px;
+                background-color: red;
+              }
+              .category {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .growDetail {
+            transform: translate(0px, 35px);
+            @include WH(100%, auto);
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+    .opportunity {
+      p {
+        padding-top: 40px;
+      }
+      .grow {
+        gap: 70px;
+        .growBox {
+          .growDetail {
+            white-space: nowrap;
+          }
+        }
+      }
     }
   }
 }

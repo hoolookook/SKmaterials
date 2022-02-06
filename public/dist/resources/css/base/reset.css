@@ -131,6 +131,9 @@ body {
     line-height: 1;
     overflow-x: hidden;
     margin: 0 auto;
+    word-break: keep-all;
+    letter-spacing: -1px;
+    -webkit-text-size-adjust: 100%;
 }
 
 ol,
