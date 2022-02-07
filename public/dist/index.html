@@ -12,16 +12,16 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<!-- AOS library -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 	<!-- js -->
 	<!--js 편집 끝나면 build로 다시 바꿔 -->
 	<script src="/public/src/resources/js/lib/main.js" defer></script>
-
 	<!-- slick -->
 	<script src="/public/src/resources/js/lib/slick.js"></script>
-
-
-
-
 	<!-- css -->
 	<link rel="stylesheet" href="/public/build/resources/css/base/style.css">
 
@@ -29,9 +29,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
+
 	<section id="header">
 		<div class="deepMenuOn"></div>
 		<div class="headerWrap clearfix">
@@ -123,22 +126,22 @@
 	<section id="fullpage">
 		<div class="cardSection">
 			<div class="card section1">
-				<img src="/public/src/resources/images/innovation-background-image.jpg" alt="imagine">
-				<div class="titleBox">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
 					<p class="smTitle padd">AI인공지능, 드론택배, 자율주행버스<br>우리가 꿈꾸는 미래,</p>
 					<h3 class="larTitle">반도체,디스플레이,배터리가<br>진화를 거듭할수록<br>상상은 빠르게 일상이 됩니다.</h3>
 				</div>
 			</div>
 			<div class="card section2">
-				<img src="/public/src/resources/images/research-background-image.jpg" alt="firstStep">
-				<div class="titleBox">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
 					<h3 class="larTitle padd">이 모든 혁신의 시작은<br>결국 소재에서부터</h3>
 					<p class="smTitle">본질을 꿰뚫고 새로운 소재를 발견하는 것,<br>미래를 여는 첫 걸음이라 믿습니다.</p>
 				</div>
 			</div>
 			<div class="card section3">
-				<img src="/public/src/resources/images/family-background-image.jpg" alt="familyGroup">
-				<div class="titleBox">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
 					<p class="larTitle padd">우리는<br>SK머티리얼즈 패밀리입니다.</p>
 					<h3 class="smTitle">SK머티리얼즈 SK머티리얼즈 에어플러스 SK트리켐 SK쇼와덴코<br>SK머티리얼즈 리뉴텍
 						SK머티리얼즈 퍼포먼스 SK머티리얼즈 제이엔씨</h3>
@@ -148,7 +151,7 @@
 		<div class="freeSection">
 			<div class="container">
 				<h3 class="larTitle">우리는<br>거침없이 성장하고 있습니다.</h3>
-				<div class="grow">
+				<div id="growH" class="grow">
 					<div class="growBox industry">
 						<div class="circle">
 							<div class="chart">
@@ -197,106 +200,174 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="oppotunity">
-
-				</div>
 			</div>
-			<div class="container opportunity">
+			<div id="oppo" class="container opportunity">
 				<h3 class="larTitle">우리는<br>기회를 놓치는 법을 모릅니다.</h3>
 				<p class="smTitle">여러분의 일상이 더욱 스마트해질수록,<br>우리는 거침없는 성장을 거듭할 것입니다.</p>
 				<div class="grow">
-					<div class="growBox value">
-						<div class="circle"></div>
+					<div class="growBox value one">
+						<div class="circle">
+							<img src="/public/src/resources/images/icons/opportunity-ai-icon.png" alt="opportunityAi">
+							<strong>
+								<span id="percentage"></span>
+								%
+							</strong>
+						</div>
 						<div class="growDetail midTitle">
 							AI
 						</div>
 					</div>
-					<div class="growBox value">
-						<div class="circle"></div>
+					<div class="growBox value two">
+						<div class="circle">
+							<img src="/public/src/resources/images/icons/opportunity-autocar-icon.png" alt="opportunityAutoCar">
+							<strong>
+								<span id="percentage"></span>
+								%
+							</strong>
+						</div>
 						<div class="growDetail midTitle">
 							자율주행차
 						</div>
 					</div>
-					<div class="growBox value">
-						<div class="circle"></div>
+					<div class="growBox value three">
+						<div class="circle">
+							<img src="/public/src/resources/images/icons/opportunity-display-icon.png" alt="opportunityDisPlay">
+							<strong>
+								<span id="percentage"></span>
+								%
+							</strong>
+						</div>
 						<div class="growDetail midTitle">
 							차세대 디스플레이
 						</div>
 					</div>
-					<div class="growBox value">
-						<div class="circle"></div>
+					<div class="growBox value four">
+						<div class="circle">
+							<img src="/public/src/resources/images/icons/opportunity-battery-icon.png" alt="opportunityBattery">
+							<strong>
+								<span id="percentage"></span>
+								%
+							</strong>
+						</div>
 						<div class="growDetail midTitle">
 							전기차용 배터리
 						</div>
 					</div>
 				</div>
-
-				<div class="oppotunity">
-
+				<div class="oppoDetail smTitle smGrey">
+					* 전방산업 성장 전망률 '20~30', CAGR기준
+					<div class="standard smTitle ">
+						언제나 그랬듯, 민첩한 유전자로 - 우리는 답을 찾을 것입니다.
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="cardSection">
-        <div class="card section4">
-            <img src="/public/src/resources/images/innovation-background-image.jpg" alt="">
-            <div class="titleBox">
-                <p class="smTitle">AI인공지능, 드론택배, 자율주행버스<br>우리가 꿈꾸는 미래,</p>
-                <h3 class="larTitle">반도체,디스플레이,배터리가<br>진화를 거듭할수록<br>상상은 빠르게 일상이 됩니다.</h3>
-            </div>
-        </div>
-        <div class="card section5">
-            <img src="/public/src/resources/images/innovation-background-image.jpg" alt="enviroment friendly">
-            <div class="titleBox">
-                <h3 class="larTitle padd">환경에 더욱 가까워지는 일,<br>그것이 우리의 경쟁력 입니다.</h3>
-                <p class="smTitle">우리는 2030년까지 모든 전력을 100% 재생에너지로 대체함을 공표하며,<br>
-                    탄소배출량이 Zero가 되는 완전한 그린 사업장을 향해 달려갑니다.<br><br>
-                    폐자원을 재활용한 친환경 소재의 개발,<br>공기 중의 이산화 탄소 재활용을 통한 자원학,<br>
-                    <br>당신과 지구의 건강한 내일을 위해 모든 사업의 친환경화에 몰두하고 있습니다.
-                </p>
-            </div>
-        </div>
-        <div class="card section7">
-            <img src="/public/src/resources/images/innovation-background-image.jpg" alt="responsbility">
-            <div class="titleBox">
-                <h3 class="larTitle padd">우리는<br>지역사회의 행복에 대해<br>책임감을 가집니다.</h3>
-                <p class="smTitle">구성원의 삶의 터전인 지역사회와 안전하게 상생하거,
-                    <br>지역을 기반으로 한 사회적 기업을 지원합니다.</p>
-            </div>
-        </div>
-        <div class="card section8">
-            <img src="/public/src/resources/images/innovation-background-image.jpg" alt="waiting co-worker">
-            <div class="titleBox">
-                <p class="smTitle padd">상상을 현실로 만드는 시작점,</p>
-                <h3 class="larTitle">새로운 미래를 함께 그려나갈<br> 동료를 기다립니다.</h3>
-            </div>
-        </div>
-    </div> -->
+		<div class="cardSection">
+			<div class="card section4">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
+					<h3 class="larTitle padd">환경에 더욱 가까워지는 일,<br>그것이 우리의 경쟁력 입니다.</h3>
+					<p class="smTitle">우리는 2030년까지 모든 전력을 100% 재생에너지로 대체함을 공표하며,<br>
+						탄소배출량이 Zero가 되는 완전한 그린 사업장을 향해 달려갑니다.<br><br>
+						폐자원을 재활용한 친환경 소재의 개발,<br>공기 중의 이산화 탄소 재활용을 통한 자원학,<br>
+						<br>당신과 지구의 건강한 내일을 위해 모든 사업의 친환경화에 몰두하고 있습니다.
+					</p>
+				</div>
+			</div>
+			<div class="card section5">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
+					<h3 class="larTitle padd">우리는<br>지역사회의 행복에 대해<br>책임감을 가집니다.</h3>
+					<p class="smTitle">구성원의 삶의 터전인 지역사회와 안전하게 상생하거,
+						<br>지역을 기반으로 한 사회적 기업을 지원합니다.
+					</p>
+				</div>
+			</div>
+			<div class="card section6">
+				<div class="backImg"></div>
+				<div class="titleBox" data-aos="fade-up">
+					<p class="smTitle padd">상상을 현실로 만드는 시작점,</p>
+					<h3 class="larTitle">새로운 미래를 함께 그려나갈<br> 동료를 기다립니다.</h3>
+					<div class="recruitWrap">
+						<div class="wrap">
+							<a href="#">SK머티리얼즈 성장의 주인공 되기
+								<i class="select"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<section id="fixed">
+			<button id="upicon" class="toTop">
+				<i class="select"></i>
+				<p>top</p>
+			</button>
+
+			<div class="recruitWrap">
+				<ul class="leftArea">
+					<li>
+						<p class="recruit head">진행 중 공고</p>
+					</li>
+					<li><a href="#" class="recruit">경력 채용 <strong>16</strong>건</a></li>
+					<li><a href="#" class="recruit">신입/인턴 채용 <strong>5</strong>건</a></li>
+				</ul>
+				<ul class="rightAria">
+					<li><a href="#" class="recruit">인재풀 등록하기<i class="select"></i></a></li>
+					<li><a href="#" class="recruit">채용알림 신청하기<i class="ring"><i class="insideRing"></i></i></a></li>
+				</ul>
+
+			</div>
+		</section>
 	</section>
 	<section id="footer">
-
-	</section>
-	<section id="fixed">
-		<button id="upicon" class="toTop">
-			<i class="select"></i>
-			<p>top</p>
-		</button>
-
-		<div class="recruitWrap">
-			<ul class="leftArea">
-				<li>
-					<p class="recruit head">진행 중 공고</p>
-				</li>
-				<li><a href="#" class="recruit">경력 채용 <strong>16</strong>건</a></li>
-				<li><a href="#" class="recruit">신입/인턴 채용 <strong>5</strong>건</a></li>
-			</ul>
-			<ul class="rightAria">
-				<li><a href="#" class="recruit">인재풀 등록하기<i class="select"></i></a></li>
-				<li><a href="#" class="recruit">채용알림 신청하기<i class="ring"><i class="insideRing"></i></i></a></li>
-			</ul>
+		<div class="container">
+			<div class="footerNavWrap clearfix">
+				<div class="footerLogo"><img src="/public/src/resources/images/icons/footer-ci.png" alt="SKMaterials Footer Logo"></div>
+				<div class="introduceWrap ">
+					<ul class="first">
+						<strong>기업 소개</strong>
+						<li><a href="#">투자 정보</a></li>
+						<li><a href="#">사업 정보</a></li>
+						<li><a href="#">지속가능경영</a></li>
+					</ul>
+					<ul class="second">
+						<strong>공지/문의</strong>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">1:1문의</a></li>
+					</ul>
+				</div>
+			</div>
 
 		</div>
+		<div class="copyRight">
+			<div class="ulWrap">
+				<ul class="copyWrap">
+					<li>
+						<p class="ind">개인정보 처리방침</p>
+					</li>
+					<li>
+						<p>COPYRIGHT© SKMaterials. ALL RIGHTS RESERVED.</p>
+					</li>
+				</ul>
+				<div class="webAccessIcon">
+					<!-- <img src="../../resources/images/icons/web-access-ci.png" alt="과학기술정보통신부 웹접근성 인증 마크"> -->
+				</div>
+			</div>
+		</div>
 	</section>
+	<script>
+		// aos js
+		AOS.init({
+			offset: 200,
+			duration: 300,
+			easing: "ease-out",
+
+		});
+		AOS.refresh();
+	</script>
 </body>
 
 </html>

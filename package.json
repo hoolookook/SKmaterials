@@ -4,6 +4,7 @@
   "description": "clone",
   "main": "gulpfile.js",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "dateformat": "^5.0.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",

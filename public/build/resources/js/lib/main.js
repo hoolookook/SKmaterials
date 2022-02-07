@@ -1,6 +1,13 @@
-// nav메뉴 hover
+// nav메뉴 hover & scroll Event
 $(document).ready(function () {
-  var hovering = false;
+  // bool값
+  // var hovering = false;
+  // var fixing = false;
+  var hovering,
+    fixing,
+    raising,
+    counting = false;
+
   function hoverFun(hovering) {
     if (hovering) {
       $("#header").css({
@@ -35,6 +42,63 @@ $(document).ready(function () {
       });
     }
   }
+  function fixedUp(fixing) {
+    if (fixing) {
+      $("#fixed").addClass("fixed");
+      $("#upicon").css({ position: "fixed", display: "block" });
+    } else {
+      $("#fixed").removeClass("fixed");
+      $("#upicon").css({ display: "none" });
+    }
+  }
+  function barRaise(raising) {
+    if (raising) {
+      $(".industry .left  .growBar").animate({ height: "190px" }, 500);
+      $(".value .left  .growBar").animate({ height: "120px" }, 500);
+      $(".right .growBar").animate({ height: "400px" }, 1000);
+    } else {
+    }
+  }
+  // 숫자 count
+  function count(counting) {
+    var one = ".one #percentage";
+    var two = ".two #percentage";
+    var three = ".three #percentage";
+    var four = ".four #percentage";
+    //
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    //
+    function countNum(shot, target) {
+      $({ val: 0 }).animate(
+        { val: shot },
+        {
+          duration: 1500,
+          step: function () {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(target).text(num);
+          },
+          complete: function () {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(target).text(num);
+          },
+        }
+      );
+    }
+    if (counting) {
+      countNum(38, one);
+      countNum(39, two);
+      countNum(14, three);
+      countNum(34, four);
+    } else {
+      $(one).text(38);
+      $(two).text(39);
+      $(three).text(14);
+      $(four).text(34);
+    }
+  }
+
   // ---------------mouse enter---------------------
   $("ul li").mouseenter(function () {
     hoverFun(true);
@@ -60,12 +124,37 @@ $(document).ready(function () {
   });
 
   // ---------------scroll event---------------------
-  $(window).scroll(function () {
-    // console.log("현재 스크롤위치는" + $(window).scrollTop());
 
+  $(window).on("scroll", function () {
     var fixedBar = $("#fixed");
-    var headerBar = $("#header");
+
     var scrollBool = $(this).scrollTop() > 0 ? true : false;
+
+    // ==============================================================================================
+    // 위치값
+    var winTop = $(window).scrollTop();
+    var section6 = document.querySelector(".section6");
+    var section3 = document.querySelector(".section3");
+    var circlePos = document.querySelector(".circle");
+
+    // 거리계산
+    var fixedDistance =
+      section6.getBoundingClientRect().top + window.pageYOffset;
+    var barDistance =
+      section3.getBoundingClientRect().top + window.pageYOffset + 800;
+    var countingDistance =
+      circlePos.getBoundingClientRect().top + window.pageYOffset; //section6 top에 windowTop이 지나야 딱맞는 위치
+
+    var countDistPlus = countingDistance + 200;
+    // ==============================================================================================
+    console.log("countingDistance: " + countingDistance);
+    console.log("winTop: " + winTop);
+
+    if (winTop > fixedDistance) {
+      fixedUp(false);
+    } else {
+      fixedUp(true);
+    }
 
     if (scrollBool > 0) {
       fixedBar.fadeIn(200);
@@ -74,8 +163,18 @@ $(document).ready(function () {
       fixedBar.hide();
       hoverFun(false);
     }
-
-    // click event
+    if (winTop > barDistance) {
+      barRaise(true);
+    } else {
+      barRaise(false);
+    }
+    if (winTop > countingDistance) {
+      if (countDistPlus > winTop) {
+        count(true);
+      } else {
+        count(false);
+      }
+    }
     function clickUpIcon() {
       $("#upicon").click(function () {
         $("html, body")

@@ -31,7 +31,8 @@
 }
 
 #header .headerWrap {
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
     height: 110px;
     position: absolute;
     top: 0;

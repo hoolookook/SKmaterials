@@ -4,10 +4,20 @@
     @@include('@@webRoot/html/include/meta.html')
 </head>
 <body>
+    
     @@include('@@webRoot/html/include/header.html')
     @@include('@@webRoot/html/include/contents.html')
     @@include('@@webRoot/html/include/fullpage.html')
     @@include('@@webRoot/html/include/footer.html')
-    @@include('@@webRoot/html/include/fixed.html')
+    <script>
+        // aos js
+    AOS.init({
+      offset: 200, 
+      duration:300, 
+      easing: "ease-out", 
+     
+    });
+    AOS.refresh();
+    </script>
 </body>
 </html>
