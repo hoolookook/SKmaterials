@@ -8,35 +8,38 @@
     background-color: #4b4b4b;
 }
 
-#footer .container {
+#footer .wrap {
+    margin: 0 20px;
+}
+
+#footer .wrap .container {
     position: relative;
     max-width: 1170px;
     margin: 0 auto;
 }
 
-#footer .container .footerNavWrap .footerLogo {
+#footer .wrap .container .footerNavWrap .footerLogo {
     position: absolute;
     top: 0;
     right: none;
     bottom: none;
     left: 0;
-    float: left;
     padding-top: 48px;
 }
 
-#footer .container .footerNavWrap .footerLogo img {
+#footer .wrap .container .footerNavWrap .footerLogo img {
     width: 130px;
     height: 47.5px;
 }
 
-#footer .container .footerNavWrap .introduceWrap {
+#footer .wrap .container .footerNavWrap .introduceWrap {
     width: 100%;
     height: 100%;
     padding: 48px 0;
     float: right;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul {
+#footer .wrap .container .footerNavWrap .introduceWrap ul {
     width: 400px;
     padding: 16px 0;
     margin: 0 0 0 auto;
@@ -64,33 +67,33 @@
     align-items: center;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul strong {
+#footer .wrap .container .footerNavWrap .introduceWrap ul strong {
     float: left;
     width: 25%;
     color: #ffffff;
     font-weight: bold;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul li {
+#footer .wrap .container .footerNavWrap .introduceWrap ul li {
     float: left;
     width: 25%;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul li a {
+#footer .wrap .container .footerNavWrap .introduceWrap ul li a {
     color: #999999;
 }
 
-#footer .copyRight {
+#footer .wrap .copyRight {
     padding: 16px 0;
     border-top: 1px solid #595959;
 }
 
-#footer .copyRight .ulWrap {
+#footer .wrap .copyRight .ulWrap {
     max-width: 1170px;
     margin: 0 auto;
 }
 
-#footer .copyRight .ulWrap .copyWrap {
+#footer .wrap .copyRight .ulWrap .copyWrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -115,15 +118,15 @@
     align-items: center;
 }
 
-#footer .copyRight .ulWrap .copyWrap li {
+#footer .wrap .copyRight .ulWrap .copyWrap li {
     padding: 17px 0;
 }
 
-#footer .copyRight .ulWrap .copyWrap li .ind {
+#footer .wrap .copyRight .ulWrap .copyWrap li .ind {
     position: relative;
 }
 
-#footer .copyRight .ulWrap .copyWrap li .ind::before {
+#footer .wrap .copyRight .ulWrap .copyWrap li .ind::before {
     position: absolute;
     top: 0;
     right: -9px;
@@ -133,11 +136,10 @@
     color: #999999;
 }
 
-#footer .copyRight .ulWrap .copyWrap li p {
-    font-size: 10px;
+#footer .wrap .copyRight .ulWrap .copyWrap li p {
     color: #999999;
 }
 
-#footer .copyRight .ulWrap .copyWrap li p:not(.ind) {
+#footer .wrap .copyRight .ulWrap .copyWrap li p:not(.ind) {
     padding-left: 15px;
 }

@@ -198,6 +198,11 @@ button {
     cursor: pointer;
 }
 
+.maxWIDTH {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 body {
     font-family: "Noto Sans Korean", "Malgun Gothic", "돋움", "dotum", "AppleGothic", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -571,6 +576,168 @@ a {
     display: none;
 }
 
+@-webkit-keyframes ringMyBell {
+    0% {
+        -webkit-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    10% {
+        -webkit-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    20% {
+        -webkit-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        -webkit-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    40% {
+        -webkit-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+
+@-moz-keyframes ringMyBell {
+    0% {
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    10% {
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    20% {
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    40% {
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        -moz-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes ringMyBell {
+    0% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    10% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    20% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+    }
+
+    40% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes grBar {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 300px;
+    }
+}
+
+@-moz-keyframes grBar {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 300px;
+    }
+}
+
+@keyframes grBar {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 300px;
+    }
+}
+
+@-webkit-keyframes grBar2 {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@-moz-keyframes grBar2 {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes grBar2 {
+    0% {
+        height: 10px;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
 .fixed {
     /* the class that will be applied */
     position: fixed;
@@ -884,7 +1051,7 @@ a {
     z-index: 1;
 }
 
-#contents .dropDownSection .container {
+#contents .dropDownSection .wrap .container {
     margin: 0 auto;
     max-width: 1170px;
     width: 100%;
@@ -920,9 +1087,9 @@ a {
     column-gap: 30px;
 }
 
-#contents .dropDownSection .container select,
-#contents .dropDownSection .container input,
-#contents .dropDownSection .container select option {
+#contents .dropDownSection .wrap .container select,
+#contents .dropDownSection .wrap .container input,
+#contents .dropDownSection .wrap .container select option {
     width: 300px;
     height: 55px;
     font-size: 20px;
@@ -931,7 +1098,7 @@ a {
     border-bottom: 1px solid #818181;
 }
 
-#contents .dropDownSection .container select {
+#contents .dropDownSection .wrap .container select {
     background: transparent;
     background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
     background-repeat: no-repeat;
@@ -944,36 +1111,36 @@ a {
     -moz-appearance: none;
 }
 
-#contents .dropDownSection .container select option {
+#contents .dropDownSection .wrap .container select option {
     color: #4b4b4b;
 }
 
-#contents .dropDownSection .container input {
+#contents .dropDownSection .wrap .container input {
     background: transparent;
     color: white;
 }
 
-#contents .dropDownSection .container input::-webkit-input-placeholder {
+#contents .dropDownSection .wrap .container input::-webkit-input-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input:-moz-placeholder {
+#contents .dropDownSection .wrap .container input:-moz-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input::-moz-placeholder {
+#contents .dropDownSection .wrap .container input::-moz-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input:-ms-input-placeholder {
+#contents .dropDownSection .wrap .container input:-ms-input-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input::placeholder {
+#contents .dropDownSection .wrap .container input::placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container .searchBtn {
+#contents .dropDownSection .wrap .container .searchBtn {
     width: 60px;
     height: 60px;
     -webkit-border-radius: 50%;
@@ -981,7 +1148,7 @@ a {
     border-radius: 50%;
 }
 
-#contents .dropDownSection .container .searchBtn img {
+#contents .dropDownSection .wrap .container .searchBtn img {
     max-width: 100%;
     width: 100%;
 }
@@ -1051,6 +1218,7 @@ a {
 }
 
 #fullpage .cardSection .card .titleBox {
+    width: 100%;
     position: absolute;
     top: 50%;
     right: none;
@@ -1064,11 +1232,6 @@ a {
 
 #fullpage .cardSection .card .titleBox .padd {
     padding-bottom: 40px;
-}
-
-#fullpage .cardSection .card .titleBox .recruitWrap {
-    width: 100%;
-    max-width: 1170px;
 }
 
 #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
@@ -1102,7 +1265,7 @@ a {
 }
 
 #fullpage .cardSection .card .titleBox .recruitWrap .wrap a:hover .select {
-    right: 29px;
+    right: 110px;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
@@ -1294,6 +1457,13 @@ a {
     -moz-border-radius: 30px;
     border-radius: 30px;
     background-color: #000000;
+    -webkit-transition: height 1.5s ease-in-out;
+    -moz-transition: height 1.5s ease-in-out;
+    transition: height 1.5s ease-in-out;
+}
+
+#fullpage .freeSection .container .grow .growBox .circle .chart .bar .blackBar {
+    height: 380px;
 }
 
 #fullpage .freeSection .container .grow .growBox .circle .chart .bar .category {
@@ -1307,11 +1477,32 @@ a {
     width: 100%;
     height: auto;
     line-height: 1.6;
+    padding-top: 40px;
+}
+
+#fullpage .freeSection .container .grow .industry .circle .chart .left .growBar {
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+
+#fullpage .freeSection .container .grow .industry .circle .chart .left .industGreyBar {
+    height: 171px;
+}
+
+#fullpage .freeSection .container .grow .value .circle .chart .left .growBar {
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+
+#fullpage .freeSection .container .grow .value .circle .chart .left .valueGreyBar {
+    height: 108px;
 }
 
 #fullpage .freeSection .opportunity {
     position: relative;
-    padding: 120px 0;
+    padding: 120px 0 0;
 }
 
 #fullpage .freeSection .opportunity p {
@@ -1343,19 +1534,12 @@ a {
 }
 
 #fullpage .freeSection .opportunity .oppoDetail {
-    position: absolute;
-    top: none;
-    right: none;
-    bottom: -40px;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
+    padding-top: 40px;
 }
 
 #fullpage .freeSection .opportunity .oppoDetail .standard {
     color: #000000;
+    padding-top: 30px;
 }
 
 #fullpage .fixed {
@@ -1445,17 +1629,6 @@ a {
     margin: 15px auto;
 }
 
-#fullpage #fixed .recruitWrap ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
 #fullpage #fixed .recruitWrap .recruit {
     letter-spacing: -0.09em;
     margin-right: 17px;
@@ -1463,6 +1636,14 @@ a {
 
 #fullpage #fixed .recruitWrap .recruit strong {
     font-weight: 600;
+}
+
+#fullpage #fixed .recruitWrap .leftArea {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 #fullpage #fixed .recruitWrap .leftArea .head {
@@ -1474,6 +1655,7 @@ a {
 }
 
 #fullpage #fixed .recruitWrap .leftArea li .recruit {
+    margin-right: 40px;
     line-height: 26px;
 }
 
@@ -1481,8 +1663,12 @@ a {
     font-size: 18px;
 }
 
-#fullpage #fixed .recruitWrap .leftArea li:last-child {
-    padding-left: 45px;
+#fullpage #fixed .recruitWrap .rightAria {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 #fullpage #fixed .recruitWrap .rightAria li {
@@ -1564,108 +1750,6 @@ a {
     margin-left: 40px;
 }
 
-@-webkit-keyframes ringMyBell {
-    0% {
-        -webkit-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    10% {
-        -webkit-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    20% {
-        -webkit-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    30% {
-        -webkit-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    40% {
-        -webkit-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    100% {
-        -webkit-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-}
-
-@-moz-keyframes ringMyBell {
-    0% {
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    10% {
-        -moz-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    20% {
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    30% {
-        -moz-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    40% {
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    100% {
-        -moz-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-}
-
-@keyframes ringMyBell {
-    0% {
-        -webkit-transform: rotateZ(10deg);
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    10% {
-        -webkit-transform: rotateZ(-10deg);
-        -moz-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    20% {
-        -webkit-transform: rotateZ(10deg);
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    30% {
-        -webkit-transform: rotateZ(-10deg);
-        -moz-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-
-    40% {
-        -webkit-transform: rotateZ(10deg);
-        -moz-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-    }
-
-    100% {
-        -webkit-transform: rotateZ(0deg);
-        -moz-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-}
-
 .fixed {
     /* the class that will be applied */
     position: fixed;
@@ -1676,35 +1760,38 @@ a {
     background-color: #4b4b4b;
 }
 
-#footer .container {
+#footer .wrap {
+    margin: 0 20px;
+}
+
+#footer .wrap .container {
     position: relative;
     max-width: 1170px;
     margin: 0 auto;
 }
 
-#footer .container .footerNavWrap .footerLogo {
+#footer .wrap .container .footerNavWrap .footerLogo {
     position: absolute;
     top: 0;
     right: none;
     bottom: none;
     left: 0;
-    float: left;
     padding-top: 48px;
 }
 
-#footer .container .footerNavWrap .footerLogo img {
+#footer .wrap .container .footerNavWrap .footerLogo img {
     width: 130px;
     height: 47.5px;
 }
 
-#footer .container .footerNavWrap .introduceWrap {
+#footer .wrap .container .footerNavWrap .introduceWrap {
     width: 100%;
     height: 100%;
     padding: 48px 0;
     float: right;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul {
+#footer .wrap .container .footerNavWrap .introduceWrap ul {
     width: 400px;
     padding: 16px 0;
     margin: 0 0 0 auto;
@@ -1732,33 +1819,33 @@ a {
     align-items: center;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul strong {
+#footer .wrap .container .footerNavWrap .introduceWrap ul strong {
     float: left;
     width: 25%;
     color: #ffffff;
     font-weight: bold;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul li {
+#footer .wrap .container .footerNavWrap .introduceWrap ul li {
     float: left;
     width: 25%;
 }
 
-#footer .container .footerNavWrap .introduceWrap ul li a {
+#footer .wrap .container .footerNavWrap .introduceWrap ul li a {
     color: #999999;
 }
 
-#footer .copyRight {
+#footer .wrap .copyRight {
     padding: 16px 0;
     border-top: 1px solid #595959;
 }
 
-#footer .copyRight .ulWrap {
+#footer .wrap .copyRight .ulWrap {
     max-width: 1170px;
     margin: 0 auto;
 }
 
-#footer .copyRight .ulWrap .copyWrap {
+#footer .wrap .copyRight .ulWrap .copyWrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -1783,15 +1870,15 @@ a {
     align-items: center;
 }
 
-#footer .copyRight .ulWrap .copyWrap li {
+#footer .wrap .copyRight .ulWrap .copyWrap li {
     padding: 17px 0;
 }
 
-#footer .copyRight .ulWrap .copyWrap li .ind {
+#footer .wrap .copyRight .ulWrap .copyWrap li .ind {
     position: relative;
 }
 
-#footer .copyRight .ulWrap .copyWrap li .ind::before {
+#footer .wrap .copyRight .ulWrap .copyWrap li .ind::before {
     position: absolute;
     top: 0;
     right: -9px;
@@ -1801,13 +1888,1119 @@ a {
     color: #999999;
 }
 
-#footer .copyRight .ulWrap .copyWrap li p {
-    font-size: 10px;
+#footer .wrap .copyRight .ulWrap .copyWrap li p {
     color: #999999;
 }
 
-#footer .copyRight .ulWrap .copyWrap li p:not(.ind) {
+#footer .wrap .copyRight .ulWrap .copyWrap li p:not(.ind) {
     padding-left: 15px;
+}
+
+.fixed {
+    /* the class that will be applied */
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 575px) {
+    #header .headerWrap .logo a img {
+        width: 216px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #header .headerWrap {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #contents .videoSection .slick-dots {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #contents .videoSection .videoTitle h2 {
+        font-size: 68px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #contents .dropDownSection .wrap {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #contents .dropDownSection .wrap .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .wrap .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 29px;
+    }
+
+    #fullpage .cardSection .card .titleBox .padd {
+        padding-bottom: 28px;
+    }
+
+    #fullpage .freeSection {
+        padding: 144px 0;
+    }
+
+    #fullpage .freeSection .opportunity {
+        padding: 108px 0 0;
+    }
+
+    #fullpage .freeSection .opportunity p {
+        padding-top: 18px;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail {
+        padding: 36px 0 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail .standard {
+        padding: 18px 0 0 0;
+    }
+
+    #fullpage .freeSection .container:first-child h3 {
+        padding-bottom: 80px;
+    }
+
+    #fullpage .freeSection .container .grow {
+        padding-top: 72px;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .growDetail {
+        padding-top: 36px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 90px;
+        height: 90px;
+        bottom: 80px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 23px;
+        left: 36px;
+        width: 16px;
+        height: 9px;
+        -moz-background-size: 16px 9px;
+        background-size: 16px 9px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 18px;
+        padding: 40px 0 30px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        margin-left: 20px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea .head {
+        font-size: 23px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
+        font-size: 16px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria {
+        margin-right: 20px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 14px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
+        top: 2px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
+        top: 9px;
+        right: -3px;
+    }
+
+    #fullpage .larTitle {
+        font-size: 2.5625rem;
+    }
+
+    #fullpage .smTitle {
+        font-size: 1.125rem;
+    }
+
+    #fullpage .midTitle {
+        font-size: 1.6875rem;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo img {
+        width: 117px;
+        height: 43px;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
+    #footer .wrap .container .footerNavWrap .introduceWrap ul li {
+        font-size: 14px;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #contents .videoSection h2 {
+        font-size: 68px;
+    }
+
+    #contents .dropDownSection .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
+        width: 320px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        padding: 26px;
+        font-size: 16px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a .select {
+        top: 26px;
+        right: 24px;
+    }
+
+    #fullpage .cardSection .card .titleBox .padd {
+        padding-bottom: 28px;
+    }
+
+    #fullpage .freeSection {
+        padding: 128px 0;
+    }
+
+    #fullpage .freeSection .opportunity {
+        padding: 96px 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail {
+        padding: 32px 0 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail .standard {
+        padding: 18px 0 0 0;
+    }
+
+    #fullpage .freeSection .container:first-child h3 {
+        padding-bottom: 107px;
+    }
+
+    #fullpage .freeSection .container .grow {
+        padding-top: 64px;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .growDetail {
+        padding-top: 16px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 80px;
+        height: 80px;
+        bottom: 80px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 20px;
+        left: 32px;
+        width: 15px;
+        height: 8px;
+        -moz-background-size: 15px 8px;
+        background-size: 15px 8px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 17px;
+        padding: 40px 0 30px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        width: 50%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea .head {
+        font-size: 20px;
+        border-right: none;
+        padding-bottom: 16px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea:first-child li {
+        width: 100%;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li {
+        display: inline-block;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
+        font-size: 14px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria {
+        gap: 20px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li {
+        width: 34%;
+        height: 41px;
+        line-height: 41px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li:last-child {
+        margin-left: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 12px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
+        top: 2px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
+        top: 9px;
+        right: -3px;
+    }
+
+    #fullpage .larTitle {
+        font-size: 2.3125rem;
+    }
+
+    #fullpage .smTitle {
+        font-size: 1rem;
+    }
+
+    #fullpage .midTitle {
+        font-size: 1.5rem;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo img {
+        width: 104px;
+        height: 38px;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
+    #footer .wrap .container .footerNavWrap .introduceWrap ul li {
+        font-size: 12px;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #contents .videoSection h2 {
+        font-size: 68px;
+    }
+
+    #contents .dropDownSection .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
+        width: 280px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        padding: 21px;
+        font-size: 14px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a .select {
+        top: 21px;
+        right: 24px;
+    }
+
+    #fullpage .cardSection .card .titleBox .padd {
+        padding-bottom: 21px;
+    }
+
+    #fullpage .freeSection {
+        padding: 112px 0;
+    }
+
+    #fullpage .freeSection .opportunity {
+        padding: 84px 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .grow .growBox .circle strong {
+        font-size: 14px;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail {
+        padding: 28px 0 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail .standard {
+        padding: 21px 0 0 0;
+    }
+
+    #fullpage .freeSection .container:first-child h3 {
+        padding-bottom: 137px;
+    }
+
+    #fullpage .freeSection .container .grow {
+        padding-top: 56px;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .growDetail {
+        padding-top: 16px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 75px;
+        height: 75px;
+        bottom: 81px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 19px;
+        left: 30px;
+        width: 14px;
+        height: 8px;
+        -moz-background-size: 14px 8px;
+        background-size: 14px 8px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 16px;
+        padding: 23px 0 0px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        width: 50%;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea .head {
+        font-size: 18px;
+        border-right: none;
+        padding-bottom: 8px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea:first-child li {
+        width: 100%;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li {
+        display: inline-block;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
+        font-size: 12px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria {
+        gap: 20px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li {
+        width: 34%;
+        height: 41px;
+        line-height: 41px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li:last-child {
+        margin-left: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 11px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
+        top: 2px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
+        top: 9px;
+        right: -3px;
+    }
+
+    #fullpage .larTitle {
+        font-size: 2rem;
+    }
+
+    #fullpage .smTitle {
+        font-size: 0.875rem;
+    }
+
+    #fullpage .midTitle {
+        font-size: 1.3125rem;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo img {
+        width: 91px;
+        height: 33px;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap {
+        padding: 42px 0;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
+    #footer .wrap .container .footerNavWrap .introduceWrap ul li {
+        font-size: 11px;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #contents .videoSection h2 {
+        font-size: 68px;
+    }
+
+    #contents .dropDownSection .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .lineBreak {
+        display: block;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
+        width: 92%;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        font-size: 17px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a .select {
+        display: none;
+        top: 23px;
+        right: 117px;
+    }
+
+    #fullpage .cardSection .card .titleBox .padd {
+        padding-bottom: 18px;
+    }
+
+    #fullpage .freeSection {
+        padding: 96px 0;
+    }
+
+    #fullpage .freeSection .opportunity {
+        padding: 72px 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .grow .growBox .circle strong {
+        font-size: 14px;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail {
+        padding: 28px 0 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail .standard {
+        padding: 18px 0 0 0;
+    }
+
+    #fullpage .freeSection .container:first-child h3 {
+        padding-bottom: 0;
+    }
+
+    #fullpage .freeSection .container #growH {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #fullpage .freeSection .container #growH .growBox {
+        width: 90%;
+        padding-top: 96px;
+    }
+
+    #fullpage .freeSection .container .grow {
+        padding-top: 48px;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .growDetail {
+        padding-top: 16px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 60px;
+        height: 60px;
+        bottom: 110px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 16px;
+        left: 25px;
+        width: 11px;
+        height: 5px;
+        -moz-background-size: 11px 5px;
+        background-size: 11px 5px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 14px;
+        padding: 15px 0 0px;
+    }
+
+    #fullpage #fixed .recruitWrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 80px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        width: 50%;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea .head {
+        font-size: 18px;
+        border-right: none;
+        padding-bottom: 8px;
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea:first-child li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li {
+        display: inline-block;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit {
+        margin-right: 0;
+        padding: 0 10px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
+        font-size: 15px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria {
+        gap: 20px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li {
+        width: 40%;
+        height: 41px;
+        line-height: 41px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li:last-child {
+        margin-left: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 14px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
+        top: 2px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
+        top: 9px;
+        right: -3px;
+    }
+
+    #fullpage .larTitle {
+        font-size: 1.6875rem;
+    }
+
+    #fullpage .smTitle {
+        font-size: 1.0625rem;
+    }
+
+    #fullpage .midTitle {
+        font-size: 1.3125rem;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo {
+        padding-top: 36px;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo img {
+        width: 78px;
+        height: 29px;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap {
+        padding: 90px 0 36px 0;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul {
+        width: auto;
+        margin: 0;
+        padding: 18px 0;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
+    #footer .wrap .container .footerNavWrap .introduceWrap ul li {
+        font-size: 14px !important;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li {
+        padding: 6px 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 13px;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p:not(.ind) {
+        padding-left: 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li .ind::before {
+        content: "";
+    }
+}
+
+@media screen and (max-width: 481px) {
+    #contents .videoSection h2 {
+        font-size: 68px;
+    }
+
+    #contents .dropDownSection .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .cardSection .card .titleBox .lineBreak {
+        display: block;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
+        width: 92%;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        font-size: 17px;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a .select {
+        top: 23px;
+        right: 117px;
+    }
+
+    #fullpage .cardSection .card .titleBox .padd {
+        padding-bottom: 18px;
+    }
+
+    #fullpage .freeSection {
+        padding: 96px 0;
+    }
+
+    #fullpage .freeSection .opportunity {
+        padding: 72px 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .grow .growBox .circle strong {
+        font-size: 14px;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail {
+        padding: 28px 0 0 0;
+    }
+
+    #fullpage .freeSection .opportunity .oppoDetail .standard {
+        padding: 18px 0 0 0;
+    }
+
+    #fullpage .freeSection .container:first-child h3 {
+        padding-bottom: 0;
+    }
+
+    #fullpage .freeSection .container #growH {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    #fullpage .freeSection .container #growH .growBox {
+        width: 90%;
+        padding-top: 96px;
+    }
+
+    #fullpage .freeSection .container .grow {
+        padding-top: 48px;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .growDetail {
+        padding-top: 16px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 60px;
+        height: 60px;
+        bottom: 110px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 16px;
+        left: 25px;
+        width: 11px;
+        height: 5px;
+        -moz-background-size: 11px 5px;
+        background-size: 11px 5px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 14px;
+        padding: 15px 0 0px;
+    }
+
+    #fullpage #fixed .recruitWrap {
+        height: 72px;
+        margin: 9px auto;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        width: 100%;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea .head {
+        font-size: 18px;
+        border-right: none;
+        padding-bottom: 8px;
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea:first-child li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li {
+        display: inline-block;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit {
+        margin-right: 0;
+        padding: 0 10px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
+        font-size: 13px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria {
+        gap: 20px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li {
+        width: 40%;
+        height: 41px;
+        line-height: 41px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li:last-child {
+        margin-left: 0;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 13px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
+        display: none;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
+        top: 2px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
+        top: 9px;
+        right: -3px;
+    }
+
+    #fullpage .larTitle {
+        font-size: 1.6875rem;
+    }
+
+    #fullpage .smTitle {
+        font-size: 1.0625rem;
+    }
+
+    #fullpage .midTitle {
+        font-size: 1.3125rem;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo {
+        padding-top: 36px;
+    }
+
+    #footer .wrap .container .footerNavWrap .footerLogo img {
+        width: 78px;
+        height: 29px;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap {
+        padding: 90px 0 36px 0;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul {
+        width: auto;
+        margin: 0;
+        padding: 18px 0;
+    }
+
+    #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
+    #footer .wrap .container .footerNavWrap .introduceWrap ul li {
+        font-size: 14px !important;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li {
+        padding: 6px 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 13px;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li p:not(.ind) {
+        padding-left: 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap .copyWrap li .ind::before {
+        content: "";
+    }
 }
 
 :root {

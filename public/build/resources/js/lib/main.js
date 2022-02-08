@@ -51,14 +51,58 @@ $(document).ready(function () {
       $("#upicon").css({ display: "none" });
     }
   }
-  function barRaise(raising) {
+  // ////////////////////////////////////////////////////////////////////////
+  // media에 따른 bar 크기 관리
+  function barRaise(raising, leftGrey, rightGrey, black, Allwidth) {
+    // 높이 비교 해서 raising =true;일때
     if (raising) {
-      $(".industry .left  .growBar").animate({ height: "190px" }, 500);
-      $(".value .left  .growBar").animate({ height: "120px" }, 500);
-      $(".right .growBar").animate({ height: "400px" }, 1000);
+      var industGreyBar = $(".industry .left  .growBar");
+      var valueGreyBar = $(".value .left  .growBar");
+      var blackBar = $(".right .growBar");
+
+      industGreyBar
+        .addClass("industGreyBar")
+        .css({ height: leftGrey })
+        .css({ width: Allwidth });
+      valueGreyBar
+        .addClass("valueGreyBar")
+        .css({ height: rightGrey })
+        .css({ width: Allwidth });
+      blackBar
+        .addClass("blackBar")
+        .css({ height: black })
+        .css({ width: Allwidth });
     } else {
     }
   }
+
+  $(function () {
+    // 미디어쿼리 js 관리
+    var m = matchMedia("screen and (max-width: 1500px)");
+    var o = matchMedia("screen and (max-width: 1199px)");
+    var p = matchMedia("screen and (max-width: 991px)");
+    var q = matchMedia("screen and (max-width: 767px)");
+    var r = matchMedia("screen and (max-width: 575px)");
+    // if
+    if (matchMedia(m.media).matches) {
+      barRaise(true, "190", "120", "380", "60");
+    }
+    if (matchMedia(o.media).matches) {
+      barRaise(true, "171", "108", "342", "54");
+    }
+    if (matchMedia(p.media).matches) {
+      barRaise(true, "152", "96", "304", "48");
+    }
+    if (matchMedia(q.media).matches) {
+      barRaise(true, "133", "84", "266", "42");
+    }
+    if (matchMedia(r.media).matches) {
+      barRaise(true, "114", "72", "228", "36");
+    } else {
+    }
+  });
+  // media에 따른 bar 크기 관리
+  // ////////////////////////////////////////////////////////////////////////
   // 숫자 count
   function count(counting) {
     var one = ".one #percentage";

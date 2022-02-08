@@ -139,7 +139,7 @@
     z-index: 1;
 }
 
-#contents .dropDownSection .container {
+#contents .dropDownSection .wrap .container {
     margin: 0 auto;
     max-width: 1170px;
     width: 100%;
@@ -175,9 +175,9 @@
     column-gap: 30px;
 }
 
-#contents .dropDownSection .container select,
-#contents .dropDownSection .container input,
-#contents .dropDownSection .container select option {
+#contents .dropDownSection .wrap .container select,
+#contents .dropDownSection .wrap .container input,
+#contents .dropDownSection .wrap .container select option {
     width: 300px;
     height: 55px;
     font-size: 20px;
@@ -186,7 +186,7 @@
     border-bottom: 1px solid #818181;
 }
 
-#contents .dropDownSection .container select {
+#contents .dropDownSection .wrap .container select {
     background: transparent;
     background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
     background-repeat: no-repeat;
@@ -199,36 +199,36 @@
     -moz-appearance: none;
 }
 
-#contents .dropDownSection .container select option {
+#contents .dropDownSection .wrap .container select option {
     color: #4b4b4b;
 }
 
-#contents .dropDownSection .container input {
+#contents .dropDownSection .wrap .container input {
     background: transparent;
     color: white;
 }
 
-#contents .dropDownSection .container input::-webkit-input-placeholder {
+#contents .dropDownSection .wrap .container input::-webkit-input-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input:-moz-placeholder {
+#contents .dropDownSection .wrap .container input:-moz-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input::-moz-placeholder {
+#contents .dropDownSection .wrap .container input::-moz-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input:-ms-input-placeholder {
+#contents .dropDownSection .wrap .container input:-ms-input-placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container input::placeholder {
+#contents .dropDownSection .wrap .container input::placeholder {
     color: white;
 }
 
-#contents .dropDownSection .container .searchBtn {
+#contents .dropDownSection .wrap .container .searchBtn {
     width: 60px;
     height: 60px;
     -webkit-border-radius: 50%;
@@ -236,7 +236,7 @@
     border-radius: 50%;
 }
 
-#contents .dropDownSection .container .searchBtn img {
+#contents .dropDownSection .wrap .container .searchBtn img {
     max-width: 100%;
     width: 100%;
 }

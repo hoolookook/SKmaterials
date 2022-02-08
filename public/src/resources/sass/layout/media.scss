@@ -103,17 +103,17 @@
 
     #fixed {
       .toTop {
-        @include WH(60px, 60px);
-        bottom: 110px;
+        @include WH(90px, 90px);
+        bottom: 80px;
         .select {
-          top: 16px;
-          left: 25px;
-          @include WH(11px, 5px);
-          background-size: 11px 5px;
+          top: 23px;
+          left: 36px;
+          @include WH(16px, 9px);
+          background-size: 16px 9px;
         }
         p {
-          font-size: 14px;
-          padding: 15px 0 0px;
+          font-size: 18px;
+          padding: 40px 0 30px;
         }
       }
       .recruitWrap {
@@ -272,17 +272,17 @@
 
     #fixed {
       .toTop {
-        @include WH(60px, 60px);
-        bottom: 110px;
+        @include WH(80px, 80px);
+        bottom: 80px;
         .select {
-          top: 16px;
-          left: 25px;
-          @include WH(11px, 5px);
-          background-size: 11px 5px;
+          top: 20px;
+          left: 32px;
+          @include WH(15px, 8px);
+          background-size: 15px 8px;
         }
         p {
-          font-size: 14px;
-          padding: 15px 0 0px;
+          font-size: 17px;
+          padding: 40px 0 30px;
         }
       }
       .recruitWrap {
@@ -502,7 +502,7 @@
         }
         .leftArea {
           width: 50%;
-          flex-direction: column;
+          //   flex-direction: column;
           .head {
             font-size: 18px;
             border-right: none;
@@ -626,6 +626,7 @@
               a {
                 font-size: 17px;
                 .select {
+                  display: none;
                   top: 23px;
                   right: 117px;
                 }
@@ -718,7 +719,7 @@
         }
         .leftArea {
           width: 50%;
-          flex-direction: column;
+          //   flex-direction: column;
           .head {
             font-size: 18px;
             border-right: none;
@@ -755,6 +756,244 @@
             }
             .recruit {
               font-size: 14px;
+              .hide {
+                display: none;
+              }
+              .select {
+                top: 2px;
+              }
+              .ring {
+                .insideRing {
+                  top: 9px;
+                  right: -3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .larTitle {
+      font-size: 1.6875rem;
+    }
+    .smTitle {
+      font-size: 1.0625rem;
+    }
+    .midTitle {
+      font-size: 1.3125rem;
+    }
+  }
+  #footer {
+    .wrap {
+      .container {
+        .footerNavWrap {
+          .footerLogo {
+            padding-top: 36px;
+            img {
+              @include WH(78px, 29px);
+            }
+          }
+          .introduceWrap {
+            padding: 90px 0 36px 0;
+            ul {
+              width: auto;
+              margin: 0;
+              padding: 18px 0;
+              strong,
+              li {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+      .copyRight {
+        .ulWrap {
+          .copyWrap {
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+
+            li {
+              padding: 6px 0;
+              p {
+                font-size: 13px;
+                &:not(.ind) {
+                  padding-left: 0;
+                }
+              }
+              .ind {
+                &::before {
+                  content: "";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 481px) {
+  #contents {
+    .videoSection {
+      h2 {
+        font-size: 68px;
+      }
+    }
+    .dropDownSection {
+      .container {
+        select {
+          font-size: 18px;
+          option {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  #fullpage {
+    .cardSection {
+      .card {
+        .titleBox {
+          .lineBreak {
+            display: block;
+          }
+          .recruitWrap {
+            .wrap {
+              width: 92%;
+              a {
+                font-size: 17px;
+                .select {
+                  top: 23px;
+                  right: 117px;
+                }
+              }
+            }
+          }
+          .padd {
+            padding-bottom: 18px;
+          }
+        }
+      }
+    }
+    .freeSection {
+      padding: 96px 0;
+      .opportunity {
+        padding: 72px 0 0;
+        p {
+        }
+        .grow {
+          .growBox {
+            .circle {
+              strong {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .oppoDetail {
+          padding: 28px 0 0 0;
+          .standard {
+            padding: 18px 0 0 0;
+          }
+        }
+      }
+      .container {
+        &:first-child h3 {
+          padding-bottom: 0;
+        }
+        #growH {
+          flex-direction: column;
+          align-items: center;
+          .growBox {
+            width: 90%;
+            padding-top: 96px;
+          }
+        }
+        .grow {
+          padding-top: 48px;
+          flex-wrap: wrap;
+          .growBox {
+            .growDetail {
+              padding-top: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    #fixed {
+      .toTop {
+        @include WH(60px, 60px);
+        bottom: 110px;
+        .select {
+          top: 16px;
+          left: 25px;
+          @include WH(11px, 5px);
+          background-size: 11px 5px;
+        }
+        p {
+          font-size: 14px;
+          padding: 15px 0 0px;
+        }
+      }
+      .recruitWrap {
+        height: 72px;
+        margin: 9px auto;
+        ul {
+        }
+        .wrap {
+          width: 360px;
+          a {
+            padding: 27px;
+            font-size: 18px;
+            .select {
+              top: 29px;
+              right: 26px;
+            }
+          }
+        }
+        .leftArea {
+          width: 100%;
+          //   flex-direction: column;
+          .head {
+            font-size: 18px;
+            border-right: none;
+            padding-bottom: 8px;
+            display: none;
+          }
+          &:first-child li {
+            width: 100%;
+            text-align: center;
+          }
+          li {
+            display: inline-block;
+            .recruit {
+              margin-right: 0;
+              padding: 0 10px;
+              &:not(.head) {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+        .rightAria {
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+          width: 100%;
+          margin-right: 0;
+          li {
+            width: 40%;
+            height: 41px;
+            line-height: 41px;
+            &:last-child {
+              margin-left: 0;
+            }
+            .recruit {
+              font-size: 13px;
               .hide {
                 display: none;
               }
