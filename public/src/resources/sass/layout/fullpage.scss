@@ -37,6 +37,7 @@
       }
 
       .titleBox {
+        width: 100%;
         @include apsolutePos(50%, none, none, 50%, $transform: false);
 
         transform: translate(-50%, -60%);
@@ -44,8 +45,8 @@
           padding-bottom: 40px;
         }
         .recruitWrap {
-          width: 100%;
-          max-width: 1170px;
+          // width: 100%;
+          // max-width: 1170px;
 
           .wrap {
             width: 400px;
@@ -68,7 +69,7 @@
                 transition: all 0.2s;
               }
               &:hover .select {
-                right: 29px;
+                right: 110px;
 
                 transition: all 0.2s;
               }
@@ -132,6 +133,7 @@
         @include commonFlex(row, center, none);
         // flex-wrap: wrap;
         // gap: 20px;
+
         .growBox {
           @include WH(50%, 100%);
           position: relative;
@@ -169,6 +171,10 @@
                   margin: 20px auto;
                   border-radius: 30px;
                   background-color: #000000;
+                  transition: height 1.5s ease-in-out;
+                }
+                .blackBar {
+                  height: 380px;
                 }
                 .category {
                   @include WH(100%, 100%);
@@ -181,13 +187,42 @@
           .growDetail {
             @include WH(100%, auto);
             line-height: 1.6;
+            padding-top: 40px;
+          }
+        }
+        .industry {
+          .circle {
+            .chart {
+              .left {
+                .growBar {
+                  transition: height 0.5s ease-in-out;
+                }
+                .industGreyBar {
+                  height: 171px;
+                }
+              }
+            }
+          }
+        }
+        .value {
+          .circle {
+            .chart {
+              .left {
+                .growBar {
+                  transition: height 0.5s ease-in-out;
+                }
+                .valueGreyBar {
+                  height: 108px;
+                }
+              }
+            }
           }
         }
       }
     }
     .opportunity {
       position: relative;
-      padding: 120px 0;
+      padding: 120px 0 0;
       p {
         padding-top: 40px;
       }
@@ -210,10 +245,12 @@
         }
       }
       .oppoDetail {
-        @include apsolutePos(none, none, -40px, 50%, false);
-        transform: translate(-50%);
+        // @include apsolutePos(none, none, -40px, 50%, false);
+        // transform: translate(-50%);
+        padding-top: 40px;
         .standard {
           color: #000000;
+          padding-top: 30px;
         }
       }
     }
@@ -264,8 +301,7 @@
       @include commonFlex(none, space-between, center);
       margin: 15px auto;
       ul {
-        display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
       }
       .recruit {
         letter-spacing: -0.09em;
@@ -275,6 +311,7 @@
         }
       }
       .leftArea {
+        display: flex;
         .head {
           position: relative;
           font-size: 26px;
@@ -284,17 +321,16 @@
         }
         li {
           .recruit {
+            margin-right: 40px;
             line-height: 26px;
             &:not(.head) {
               font-size: 18px;
             }
           }
-          &:last-child {
-            padding-left: 45px;
-          }
         }
       }
       .rightAria {
+        display: flex;
         li {
           @include WH(240px, 50px);
           line-height: 50px;
@@ -341,28 +377,6 @@
           }
         }
       }
-    }
-  }
-
-  @keyframes ringMyBell {
-    0% {
-      transform: rotateZ(10deg);
-    }
-    10% {
-      transform: rotateZ(-10deg);
-    }
-    20% {
-      transform: rotateZ(10deg);
-    }
-    30% {
-      transform: rotateZ(-10deg);
-    }
-    40% {
-      transform: rotateZ(10deg);
-    }
-
-    100% {
-      transform: rotateZ(0deg);
     }
   }
 }

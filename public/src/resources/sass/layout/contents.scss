@@ -77,53 +77,54 @@
     @include apsolutePos(none, none, 0, 50%, $transform: true);
     width: 100%;
     z-index: 1;
-    .container {
-      // @include MinWH(1170px, auto);
-      margin: 0 auto;
-      max-width: 1170px;
-      @include WH(100%, 130px);
-      border-radius: 30px 30px 0 0;
-      background-color: #4b4b4b;
-      //   @include commonFlex(column wrap, space-around, flex-start); 미디어쿼리때 세로줄
-      @include commonFlex(row wrap, center, center);
-      column-gap: 30px;
+    .wrap {
+      .container {
+        margin: 0 auto;
+        max-width: 1170px;
+        @include WH(100%, 130px);
+        border-radius: 30px 30px 0 0;
+        background-color: #4b4b4b;
+        //   @include commonFlex(column wrap, space-around, flex-start); 미디어쿼리때 세로줄
+        @include commonFlex(row wrap, center, center);
+        column-gap: 30px;
 
-      select,
-      input,
-      select option {
-        @include WH(300px, 55px);
-        font-size: 20px;
-        border: 0;
-        font-weight: 500;
-        border-bottom: 1px solid #818181;
-      }
-      select {
-        background: transparent;
-        background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
-        background-repeat: no-repeat;
-        background-position-x: 92%;
-        background-position-y: 25px;
-        background-size: 16px 10px;
-        color: white;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        option {
-          color: #4b4b4b;
+        select,
+        input,
+        select option {
+          @include WH(300px, 55px);
+          font-size: 20px;
+          border: 0;
+          font-weight: 500;
+          border-bottom: 1px solid #818181;
         }
-      }
-      input {
-        background: transparent;
-        color: white;
-        &::placeholder {
+        select {
+          background: transparent;
+          background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
+          background-repeat: no-repeat;
+          background-position-x: 92%;
+          background-position-y: 25px;
+          background-size: 16px 10px;
           color: white;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          option {
+            color: #4b4b4b;
+          }
         }
-      }
-      .searchBtn {
-        @include WH(60px, 60px);
-        border-radius: 50%;
-        img {
-          max-width: 100%;
-          width: 100%;
+        input {
+          background: transparent;
+          color: white;
+          &::placeholder {
+            color: white;
+          }
+        }
+        .searchBtn {
+          @include WH(60px, 60px);
+          border-radius: 50%;
+          img {
+            max-width: 100%;
+            width: 100%;
+          }
         }
       }
     }
