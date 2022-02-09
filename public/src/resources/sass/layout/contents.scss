@@ -2,31 +2,38 @@
 
 #contents {
   @include WH(100vw, 100vh);
-  #playPause {
-    @include apsolutePos(none, none, 200px, 50%, $transform: false);
-    transform: translate(-357px);
-    display: block;
+  .playWrap {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 100vh;
+    #playPause {
+      @include apsolutePos(none, 0, 202px, none, $transform: false);
+      padding-right: 77%;
+      display: block;
 
-    z-index: 15;
-    button {
-      margin: 0 7px;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      &:focus {
+      z-index: 15;
+      button {
+        margin: 0 7px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        &:focus {
+          opacity: 1;
+        }
+      }
+      .play {
+        @include WH(15px, 15px);
+        @include backgroundRS(15px 15px);
+        background-image: url(../../images/icons/slider-play-icon-white.png);
         opacity: 1;
       }
-    }
-    .play {
-      @include WH(15px, 15px);
-      @include backgroundRS(15px 15px);
-      background-image: url(../../images/icons/slider-play-icon-white.png);
-      opacity: 1;
-    }
-    .pause {
-      @include WH(15px, 15px);
-      @include backgroundRS(15px 15px);
-      background-image: url(../../images/icons/slider-pause-icon-white.png);
-      opacity: 0.5;
+      .pause {
+        @include WH(15px, 15px);
+        @include backgroundRS(15px 15px);
+        background-image: url(../../images/icons/slider-pause-icon-white.png);
+        opacity: 0.5;
+      }
     }
   }
 
@@ -78,15 +85,17 @@
     width: 100%;
     z-index: 1;
     .wrap {
+      margin: 0 auto;
+      max-width: 1170px;
+      @include WH(auto, auto);
+      border-radius: 30px 30px 0 0;
+      background-color: #4b4b4b;
       .container {
-        margin: 0 auto;
-        max-width: 1170px;
-        @include WH(100%, 130px);
-        border-radius: 30px 30px 0 0;
-        background-color: #4b4b4b;
-        //   @include commonFlex(column wrap, space-around, flex-start); 미디어쿼리때 세로줄
+        // flex-wrap: nowrap;
+        padding: 30px 60px 40px;
         @include commonFlex(row wrap, center, center);
         column-gap: 30px;
+        flex-wrap: nowrap;
 
         select,
         input,
@@ -98,6 +107,7 @@
           border-bottom: 1px solid #818181;
         }
         select {
+          width: 28.5%;
           background: transparent;
           background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
           background-repeat: no-repeat;
@@ -112,6 +122,7 @@
           }
         }
         input {
+          width: 28.5%;
           background: transparent;
           color: white;
           &::placeholder {
@@ -119,6 +130,7 @@
           }
         }
         .searchBtn {
+          width: 28.5%;
           @include WH(60px, 60px);
           border-radius: 50%;
           img {

@@ -123,6 +123,7 @@ body {
   word-break: keep-all;
   letter-spacing: -1px;
   -webkit-text-size-adjust: 100%;
+  touch-action: pan-y;
   // background-color: red;
 }
 ol,
@@ -181,4 +182,10 @@ button {
   margin: 0 auto;
 }
 .JsGrowBar {
+}
+
+.fixed {
+  /* the class that will be applied */
+  position: fixed;
+  bottom: 0;
 }

@@ -1,26 +1,40 @@
 @import "../base/commons.scss";
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 1199px) {
   #header {
     .headerWrap {
       .logo {
         a {
           img {
-            width: 216px;
-            height: 30px;
+            @include WH(329px, 45px);
           }
         }
       }
-    }
-  }
-}
-@media screen and (max-width: 1199px) {
-  #header {
-    .headerWrap {
       margin-left: 20px;
       margin-right: 20px;
     }
   }
   #contents {
+    .slick-dots {
+      column-gap: 35px;
+      .progressBar {
+        .line {
+          width: 54px;
+        }
+      }
+      li {
+        button {
+          &::before {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .playWrap {
+      #playPause {
+        padding-right: 72%;
+      }
+    }
     .videoSection {
       .slick-dots {
         margin-left: 20px;
@@ -238,9 +252,6 @@
               }
             }
           }
-          .padd {
-            padding-bottom: 28px;
-          }
         }
       }
     }
@@ -250,9 +261,6 @@
         padding: 96px 0 0;
         .oppoDetail {
           padding: 32px 0 0 0;
-          .standard {
-            padding: 18px 0 0 0;
-          }
         }
       }
       .container {
@@ -286,8 +294,6 @@
         }
       }
       .recruitWrap {
-        ul {
-        }
         .wrap {
           width: 360px;
           a {
@@ -335,15 +341,6 @@
               font-size: 12px;
               .hide {
                 display: none;
-              }
-              .select {
-                top: 2px;
-              }
-              .ring {
-                .insideRing {
-                  top: 9px;
-                  right: -3px;
-                }
               }
             }
           }
@@ -437,8 +434,6 @@
     .freeSection {
       padding: 112px 0;
       .opportunity {
-        p {
-        }
         .grow {
           .growBox {
             .circle {
@@ -462,11 +457,6 @@
         }
         .grow {
           padding-top: 56px;
-          .growBox {
-            .growDetail {
-              padding-top: 16px;
-            }
-          }
         }
       }
     }
@@ -487,8 +477,6 @@
         }
       }
       .recruitWrap {
-        ul {
-        }
         .wrap {
           width: 360px;
           a {
@@ -502,17 +490,12 @@
         }
         .leftArea {
           width: 50%;
-          //   flex-direction: column;
+
           .head {
             font-size: 18px;
-            border-right: none;
             padding-bottom: 8px;
           }
-          &:first-child li {
-            width: 100%;
-          }
           li {
-            display: inline-block;
             .recruit {
               &:not(.head) {
                 font-size: 12px;
@@ -526,26 +509,8 @@
           flex-wrap: wrap;
           width: 50%;
           li {
-            width: 34%;
-            height: 41px;
-            line-height: 41px;
-            &:last-child {
-              margin-left: 0;
-            }
             .recruit {
               font-size: 11px;
-              .hide {
-                display: none;
-              }
-              .select {
-                top: 2px;
-              }
-              .ring {
-                .insideRing {
-                  top: 9px;
-                  right: -3px;
-                }
-              }
             }
           }
         }
@@ -596,6 +561,18 @@
   }
 }
 @media screen and (max-width: 575px) {
+  #header {
+    .headerWrap {
+      .logo {
+        a {
+          img {
+            width: 216px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
   #contents {
     .videoSection {
       h2 {
@@ -643,20 +620,7 @@
       padding: 96px 0;
       .opportunity {
         padding: 72px 0 0;
-        p {
-        }
-        .grow {
-          .growBox {
-            .circle {
-              strong {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-
         .oppoDetail {
-          padding: 28px 0 0 0;
           .standard {
             padding: 18px 0 0 0;
           }
@@ -677,11 +641,6 @@
         .grow {
           padding-top: 48px;
           flex-wrap: wrap;
-          .growBox {
-            .growDetail {
-              padding-top: 16px;
-            }
-          }
         }
       }
     }
@@ -704,8 +663,6 @@
       .recruitWrap {
         flex-direction: column;
         height: 80px;
-        ul {
-        }
         .wrap {
           width: 360px;
           a {
@@ -719,19 +676,14 @@
         }
         .leftArea {
           width: 50%;
-          //   flex-direction: column;
+
           .head {
-            font-size: 18px;
-            border-right: none;
-            padding-bottom: 8px;
             display: none;
           }
           &:first-child li {
-            width: 100%;
             text-align: center;
           }
           li {
-            display: inline-block;
             .recruit {
               margin-right: 0;
               padding: 0 10px;
@@ -742,32 +694,12 @@
           }
         }
         .rightAria {
-          gap: 20px;
-          justify-content: center;
-          flex-wrap: wrap;
           width: 100%;
           margin-right: 0;
           li {
             width: 40%;
-            height: 41px;
-            line-height: 41px;
-            &:last-child {
-              margin-left: 0;
-            }
             .recruit {
               font-size: 14px;
-              .hide {
-                display: none;
-              }
-              .select {
-                top: 2px;
-              }
-              .ring {
-                .insideRing {
-                  top: 9px;
-                  right: -3px;
-                }
-              }
             }
           }
         }
@@ -778,9 +710,6 @@
     }
     .smTitle {
       font-size: 1.0625rem;
-    }
-    .midTitle {
-      font-size: 1.3125rem;
     }
   }
   #footer {
@@ -856,9 +785,6 @@
     .cardSection {
       .card {
         .titleBox {
-          .lineBreak {
-            display: block;
-          }
           .recruitWrap {
             .wrap {
               width: 92%;
@@ -871,79 +797,16 @@
               }
             }
           }
-          .padd {
-            padding-bottom: 18px;
-          }
         }
       }
     }
-    .freeSection {
-      padding: 96px 0;
-      .opportunity {
-        padding: 72px 0 0;
-        p {
-        }
-        .grow {
-          .growBox {
-            .circle {
-              strong {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-
-        .oppoDetail {
-          padding: 28px 0 0 0;
-          .standard {
-            padding: 18px 0 0 0;
-          }
-        }
-      }
-      .container {
-        &:first-child h3 {
-          padding-bottom: 0;
-        }
-        #growH {
-          flex-direction: column;
-          align-items: center;
-          .growBox {
-            width: 90%;
-            padding-top: 96px;
-          }
-        }
-        .grow {
-          padding-top: 48px;
-          flex-wrap: wrap;
-          .growBox {
-            .growDetail {
-              padding-top: 16px;
-            }
-          }
-        }
-      }
-    }
-
     #fixed {
       .toTop {
-        @include WH(60px, 60px);
-        bottom: 110px;
-        .select {
-          top: 16px;
-          left: 25px;
-          @include WH(11px, 5px);
-          background-size: 11px 5px;
-        }
-        p {
-          font-size: 14px;
-          padding: 15px 0 0px;
-        }
+        bottom: 90px;
       }
       .recruitWrap {
         height: 72px;
         margin: 9px auto;
-        ul {
-        }
         .wrap {
           width: 360px;
           a {
@@ -957,22 +820,9 @@
         }
         .leftArea {
           width: 100%;
-          //   flex-direction: column;
-          .head {
-            font-size: 18px;
-            border-right: none;
-            padding-bottom: 8px;
-            display: none;
-          }
-          &:first-child li {
-            width: 100%;
-            text-align: center;
-          }
+
           li {
-            display: inline-block;
             .recruit {
-              margin-right: 0;
-              padding: 0 10px;
               &:not(.head) {
                 font-size: 13px;
               }
@@ -980,30 +830,127 @@
           }
         }
         .rightAria {
-          gap: 20px;
-          justify-content: center;
-          flex-wrap: wrap;
-          width: 100%;
-          margin-right: 0;
           li {
-            width: 40%;
-            height: 41px;
-            line-height: 41px;
-            &:last-child {
-              margin-left: 0;
-            }
             .recruit {
               font-size: 13px;
-              .hide {
-                display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  #footer {
+    .wrap {
+      .copyRight {
+        .ulWrap {
+          li {
+            padding: 6px 0;
+            p {
+              font-size: 13px;
+              &:not(.ind) {
+                padding-left: 0;
               }
+            }
+            .ind {
+              &::before {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 393px) {
+  #contents {
+    .videoSection {
+      h2 {
+        font-size: 68px;
+      }
+    }
+    .dropDownSection {
+      .container {
+        select {
+          font-size: 18px;
+          option {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  #fullpage {
+    .freeSection {
+      padding: 60px 0;
+      .container {
+        .grow {
+          .growBox {
+            .circle {
+              width: 70%;
+              padding-bottom: 70%;
+              .chart {
+                .bar {
+                  padding: 0 0.375rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .cardSection {
+      .card {
+        .titleBox {
+          .recruitWrap {
+            .wrap {
+              a {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #fixed {
+      .toTop {
+        width: 45px;
+        height: 45px;
+        .select {
+          top: 12px;
+          left: 17px;
+        }
+        p {
+          font-size: 11px;
+        }
+      }
+      .recruitWrap {
+        .wrap {
+          width: 360px;
+          a {
+            padding: 27px;
+            font-size: 18px;
+            .select {
+              top: 29px;
+              right: 26px;
+            }
+          }
+        }
+        .leftArea {
+          margin-left: 6px;
+        }
+        .rightAria {
+          li {
+            height: 30px;
+            line-height: 30px;
+            .recruit {
+              font-size: 11px;
               .select {
-                top: 2px;
+                right: -24px;
               }
               .ring {
                 .insideRing {
-                  top: 9px;
-                  right: -3px;
+                  right: 1px;
                 }
               }
             }
@@ -1012,34 +959,24 @@
       }
     }
     .larTitle {
-      font-size: 1.6875rem;
-    }
-    .smTitle {
-      font-size: 1.0625rem;
+      font-size: 1.2875rem;
     }
     .midTitle {
-      font-size: 1.3125rem;
+      font-size: 1.0125rem;
+    }
+    .smTitle {
+      font-size: 0.8rem;
     }
   }
   #footer {
     .wrap {
       .container {
         .footerNavWrap {
-          .footerLogo {
-            padding-top: 36px;
-            img {
-              @include WH(78px, 29px);
-            }
-          }
           .introduceWrap {
-            padding: 90px 0 36px 0;
             ul {
-              width: auto;
-              margin: 0;
-              padding: 18px 0;
               strong,
               li {
-                font-size: 14px !important;
+                font-size: 11px !important;
               }
             }
           }
@@ -1048,22 +985,9 @@
       .copyRight {
         .ulWrap {
           .copyWrap {
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: flex-start;
-
             li {
-              padding: 6px 0;
               p {
-                font-size: 13px;
-                &:not(.ind) {
-                  padding-left: 0;
-                }
-              }
-              .ind {
-                &::before {
-                  content: "";
-                }
+                font-size: 12px;
               }
             }
           }
