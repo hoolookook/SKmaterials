@@ -88,31 +88,31 @@ $(document).ready(function () {
     // if
     if (matchMedia(m.media).matches) {
       barRaise(true, "190", "120", "380", "60");
-      $(".progressBar").css({ width: "60px" });
+      $(".progressBar    ").css({ width: "60px" });
     }
     if (matchMedia(o.media).matches) {
       barRaise(true, "171", "108", "342", "54");
-      $(".progressBar").css({ width: "54px" });
+      $(".progressBar    ").css({ width: "54px" });
     }
     if (matchMedia(p.media).matches) {
       barRaise(true, "152", "96", "304", "48");
-      $(".progressBar").css({ width: "48px" });
+      $(".progressBar    ").css({ width: "48px" });
     }
     if (matchMedia(q.media).matches) {
       barRaise(true, "133", "84", "266", "42");
-      $(".progressBar").css({ width: "42px" });
+      $(".progressBar    ").css({ width: "42px" });
     }
     if (matchMedia(r.media).matches) {
       barRaise(true, "114", "72", "228", "36");
-      $(".progressBar").css({ width: "60px" });
+      $(".progressBar").css({ width: "36px" });
     }
     if (matchMedia(s.media).matches) {
       barRaise(true, "94", "52", "188", "30");
-      $(".progressBar").css({ width: "60px" });
+      $(".progressBar    ").css({ width: "60px" });
     }
     if (matchMedia(t.media).matches) {
       barRaise(true, "74", "32", "128", "24");
-      $(".progressBar").css({ width: "60px" });
+      $(".progressBar    ").css({ width: "60px" });
     } else {
     }
   });

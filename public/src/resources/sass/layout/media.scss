@@ -18,9 +18,6 @@
     .slick-dots {
       column-gap: 35px;
       .progressBar {
-        .line {
-          width: 54px;
-        }
       }
       li {
         button {
@@ -218,18 +215,56 @@
   }
 }
 @media screen and (max-width: 991px) {
+  #header {
+    .headerWrap {
+      .logo {
+        a {
+          img {
+            @include WH(290px, 40px);
+          }
+        }
+      }
+    }
+  }
   #contents {
+    .playWrap {
+      #playPause {
+        padding-right: 35%;
+      }
+    }
     .videoSection {
-      h2 {
-        font-size: 68px;
+      .videoTitle {
+        top: 40%;
+        h2 {
+          text-align: center;
+          font-size: 61px;
+        }
+      }
+      .slick-dots {
+        column-gap: 30px;
+        transform: translate(-17%);
+        .progressBar {
+          width: 48px;
+        }
+        li {
+          button {
+            &::before {
+              font-size: 13px;
+            }
+          }
+        }
       }
     }
     .dropDownSection {
-      .container {
-        select {
-          font-size: 18px;
-          option {
-            font-size: 18px;
+      .wrap {
+        .container {
+          padding: 24px 48px 32px;
+          select,
+          input {
+            font-size: 16px;
+            option {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -391,18 +426,65 @@
   }
 }
 @media screen and (max-width: 767px) {
+  #header {
+    .headerWrap {
+      .logo {
+        a {
+          img {
+            @include WH(255px, 35px);
+          }
+        }
+      }
+    }
+  }
   #contents {
+    .playWrap {
+      #playPause {
+        bottom: 143px;
+      }
+    }
     .videoSection {
-      h2 {
-        font-size: 68px;
+      .slick-dots {
+        bottom: 140px;
+        column-gap: 20px;
+        .progressBar {
+          width: 42px;
+        }
+        li {
+          button {
+            &::before {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      .videoTitle {
+        h2 {
+          font-size: 53px;
+        }
       }
     }
     .dropDownSection {
-      .container {
-        select {
-          font-size: 18px;
-          option {
-            font-size: 18px;
+      .wrap {
+        .container {
+          column-gap: 10px;
+          .searchBtn {
+            width: 42px;
+            height: 42px;
+          }
+          padding: 21px 42px 28px;
+          select {
+            font-size: 13px;
+            height: 42px;
+            background-position-y: 14px;
+            background-size: 11px 6px;
+            option {
+              font-size: 13px;
+            }
+          }
+          input {
+            font-size: 13px;
+            height: 42px;
           }
         }
       }
@@ -574,17 +656,57 @@
     }
   }
   #contents {
+    .playWrap {
+      #playPause {
+        bottom: 234px;
+        padding-right: 28%;
+      }
+    }
     .videoSection {
-      h2 {
-        font-size: 68px;
+      .slick-dots {
+        bottom: 233px;
+        column-gap: 20px;
+        transform: translate(-31%);
+        .progressBar {
+          width: 36px;
+        }
+        li {
+          button {
+            &::before {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .videoTitle {
+        top: 32%;
+        h2 {
+          font-size: 36px;
+        }
       }
     }
     .dropDownSection {
-      .container {
-        select {
-          font-size: 18px;
-          option {
-            font-size: 18px;
+      .wrap {
+        .container {
+          row-gap: 15px;
+          padding: 18px 24px 24px;
+          flex-direction: column;
+          select,
+          input {
+            width: 100%;
+            font-size: 17px;
+            padding: 12px 0;
+            height: auto;
+            option {
+              font-size: 18px;
+            }
+          }
+          .searchBtn {
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            right: 47px;
+            bottom: 37px;
           }
         }
       }

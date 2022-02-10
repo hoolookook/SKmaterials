@@ -165,7 +165,8 @@ $slick-opacity-not-active: 1 !default;
     left: 25px;
     top: 9px;
     .line {
-      @include WH(60px, 2px);
+      // @include WH(60px, 2px);
+      height: 2px;
       background-color: #fff;
       animation: slidein 16s;
     }
