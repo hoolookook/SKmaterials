@@ -9,8 +9,8 @@
     margin: 0 auto;
     height: 100vh;
     #playPause {
-      @include apsolutePos(none, 0, 202px, none, $transform: false);
-      padding-right: 77%;
+      @include apsolutePos(none, 0, 184px, none, $transform: false);
+      padding-right: 75%;
       display: block;
 
       z-index: 15;

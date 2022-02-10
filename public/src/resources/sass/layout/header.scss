@@ -26,6 +26,45 @@
         }
       }
     }
+    .navOnOff {
+      display: none;
+      @include WH(50px, 50px);
+      @include apsolutePos(25px, 50px, none, none, false);
+      background-color: black;
+      border-radius: 100%;
+      z-index: 301;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      &::before,
+      &::after {
+        content: "";
+        background-color: #fff;
+      }
+      &::before {
+        @include WH(25px, 4px);
+        @include apsolutePos(18px, none, none, 12px, false);
+      }
+      &::after {
+        @include WH(20px, 4px);
+        @include apsolutePos(28px, none, none, 12px, false);
+      }
+    }
+    .exit {
+      background-color: #fff;
+      &::before {
+        transform: translateX(-50%) rotate(-45deg);
+      }
+      &::after {
+        transform: translateX(-50%) rotate(45deg);
+      }
+      &::before,
+      &::after {
+        top: 23px;
+        left: 50%;
+        width: 30px;
+        background-color: #000;
+      }
+    }
     .navWrap {
       float: right;
       .nav {
@@ -91,6 +130,64 @@
           width: 210px;
           li {
             padding: 35px 12px 52px;
+          }
+        }
+      }
+    }
+
+    .MediaNavWrap {
+      display: none;
+      position: fixed;
+
+      top: 0;
+      left: -20px;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      z-index: 300;
+      .wrap {
+        position: relative;
+        padding: 144px 20px;
+        width: 100%;
+        height: 100vh;
+
+        .click {
+          // padding: 18px 0;
+
+          li {
+            &:first-child {
+              padding-top: 75px;
+            }
+            padding: 27px 0;
+            a {
+              font-size: 27px;
+            }
+          }
+        }
+
+        li {
+          text-align: center;
+          a {
+            font-size: 45px;
+            text-align: center;
+            color: #fff;
+          }
+        }
+        .firstNav {
+          padding: 31.5px 0;
+
+          .click {
+            display: none;
+          }
+          .show {
+            display: block;
+          }
+          .hide {
+            display: none;
+          }
+          .FamilyDeepM {
+          }
+          .LifeDeepM {
           }
         }
       }

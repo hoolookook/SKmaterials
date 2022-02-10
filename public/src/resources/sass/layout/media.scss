@@ -10,6 +10,19 @@
           }
         }
       }
+      .navWrap {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        z-index: 300;
+      }
+      .navOnOff {
+        display: block;
+      }
       margin-left: 20px;
       margin-right: 20px;
     }
@@ -17,8 +30,6 @@
   #contents {
     .slick-dots {
       column-gap: 35px;
-      .progressBar {
-      }
       li {
         button {
           &::before {
@@ -34,6 +45,7 @@
     }
     .videoSection {
       .slick-dots {
+        transform: translate(-318%);
         margin-left: 20px;
         margin-right: 20px;
       }
@@ -114,6 +126,7 @@
 
     #fixed {
       .toTop {
+        // right: 25px;
         @include WH(90px, 90px);
         bottom: 80px;
         .select {
@@ -224,6 +237,31 @@
           }
         }
       }
+      .MediaNavWrap {
+        .wrap {
+          padding: 128px 20px;
+          .click {
+            // padding: 16px 0 32px;
+            li {
+              &:first-child {
+                padding-top: 60px;
+              }
+              padding: 24px 0;
+              a {
+                font-size: 24px;
+              }
+            }
+          }
+          li {
+            a {
+              font-size: 40px;
+            }
+          }
+          .firstNav {
+            padding: 28px 0;
+          }
+        }
+      }
     }
   }
   #contents {
@@ -242,7 +280,7 @@
       }
       .slick-dots {
         column-gap: 30px;
-        transform: translate(-17%);
+        transform: translate(-87%);
         .progressBar {
           width: 48px;
         }
@@ -432,6 +470,30 @@
         a {
           img {
             @include WH(255px, 35px);
+          }
+        }
+      }
+      .MediaNavWrap {
+        .wrap {
+          .click {
+            li {
+              &:first-child {
+                padding-top: 51px;
+              }
+              padding: 21px 0;
+              a {
+                font-size: 21px;
+              }
+            }
+          }
+          padding: 112px 20px;
+          .firstNav {
+            padding-top: 24.5px;
+          }
+          li {
+            a {
+              font-size: 35px;
+            }
           }
         }
       }
@@ -645,11 +707,55 @@
 @media screen and (max-width: 575px) {
   #header {
     .headerWrap {
+      .navOnOff {
+        &::before {
+          @include WH(11px, 2px);
+          top: 20px;
+        }
+        &:after {
+          @include WH(16px, 2px);
+          top: 14px;
+          left: 11px;
+        }
+        @include WH(35px, 35px);
+      }
+      .exit {
+        &::before,
+        &::after {
+          top: 17px;
+          left: 50%;
+          width: 19px;
+        }
+      }
       .logo {
         a {
           img {
             width: 216px;
             height: 30px;
+          }
+        }
+      }
+      .MediaNavWrap {
+        .wrap {
+          .click {
+            li {
+              &:first-child {
+                padding-top: 45px;
+              }
+              padding: 18px 0;
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+          .firstNav {
+            // padding-top: 21px;
+            padding: 21px 0;
+          }
+          li {
+            a {
+              font-size: 30px;
+            }
           }
         }
       }
@@ -659,14 +765,14 @@
     .playWrap {
       #playPause {
         bottom: 234px;
-        padding-right: 28%;
+        padding-right: 19%;
       }
     }
     .videoSection {
       .slick-dots {
         bottom: 233px;
         column-gap: 20px;
-        transform: translate(-31%);
+        transform: translate(-91%);
         .progressBar {
           width: 36px;
         }
@@ -1038,6 +1144,7 @@
       .toTop {
         width: 45px;
         height: 45px;
+        right: 26px;
         .select {
           top: 12px;
           left: 17px;
@@ -1064,7 +1171,7 @@
         .rightAria {
           li {
             height: 30px;
-            line-height: 30px;
+            line-height: 25px;
             .recruit {
               font-size: 11px;
               .select {
@@ -1111,6 +1218,86 @@
               p {
                 font-size: 12px;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 294px) {
+  #contents {
+    .playWrap {
+      #playPause {
+        bottom: 231px;
+        padding-right: 39%;
+      }
+    }
+    .videoSection {
+      .slick-dots {
+        bottom: 267px;
+        column-gap: 20px;
+        transform: translate(-67%);
+        .progressBar {
+          width: 36px;
+        }
+        li {
+          button {
+            &::before {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .videoTitle {
+        top: 32%;
+        h2 {
+          font-size: 36px;
+        }
+      }
+    }
+    .dropDownSection {
+      .wrap {
+        .container {
+          select,
+          input {
+            font-size: 13px;
+            padding: 8px 0;
+          }
+          .searchBtn {
+            bottom: 29px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 294px) {
+  #header {
+    .headerWrap {
+      .navOnOff {
+        top: 5px;
+        right: 24px;
+      }
+      .MediaNavWrap {
+        .wrap {
+          .click {
+            li {
+              &:first-child {
+                padding-top: 30px;
+              }
+              padding: 10px 0;
+              a {
+                font-size: 13px;
+              }
+            }
+          }
+          .firstNav {
+            padding: 11px 0;
+          }
+          li {
+            a {
+              font-size: 20px;
             }
           }
         }

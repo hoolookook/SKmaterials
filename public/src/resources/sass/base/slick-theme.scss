@@ -150,10 +150,11 @@ $slick-opacity-not-active: 1 !default;
 }
 
 .slick-dots {
-  @include apsolutePos(none, none, 200px, 50%, $transform: true);
+  @include apsolutePos(none, none, 181px, 50%, $transform: false);
+  transform: translate(-328%);
   height: auto;
   max-width: 1170px;
-  width: 100%;
+  // width: 100%;
   z-index: 1;
   display: flex;
   column-gap: 40px;

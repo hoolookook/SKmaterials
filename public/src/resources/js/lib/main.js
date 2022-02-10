@@ -85,22 +85,23 @@ $(document).ready(function () {
     var r = matchMedia("screen and (max-width: 575px)");
     var s = matchMedia("screen and (max-width: 393px)");
     var t = matchMedia("screen and (max-width: 393px)");
+    var u = matchMedia("screen and (max-width: 294px)");
     // if
     if (matchMedia(m.media).matches) {
       barRaise(true, "190", "120", "380", "60");
-      $(".progressBar    ").css({ width: "60px" });
+      $(".progressBar").css({ width: "60px" });
     }
     if (matchMedia(o.media).matches) {
       barRaise(true, "171", "108", "342", "54");
-      $(".progressBar    ").css({ width: "54px" });
+      $(".progressBar").css({ width: "54px" });
     }
     if (matchMedia(p.media).matches) {
       barRaise(true, "152", "96", "304", "48");
-      $(".progressBar    ").css({ width: "48px" });
+      $(".progressBar").css({ width: "48px" });
     }
     if (matchMedia(q.media).matches) {
       barRaise(true, "133", "84", "266", "42");
-      $(".progressBar    ").css({ width: "42px" });
+      $(".progressBar").css({ width: "42px" });
     }
     if (matchMedia(r.media).matches) {
       barRaise(true, "114", "72", "228", "36");
@@ -108,14 +109,83 @@ $(document).ready(function () {
     }
     if (matchMedia(s.media).matches) {
       barRaise(true, "94", "52", "188", "30");
-      $(".progressBar    ").css({ width: "60px" });
+      $(".progressBar").css({ width: "36px" });
     }
     if (matchMedia(t.media).matches) {
       barRaise(true, "74", "32", "128", "24");
-      $(".progressBar    ").css({ width: "60px" });
+      $(".progressBar").css({ width: "36px" });
+    }
+    if (matchMedia(u.media).matches) {
+      $(".progressBar").css({ width: "36px" });
     } else {
     }
   });
+
+  // nav onOff
+  $(function () {
+    var $family = $(".family"),
+      $familyClick = $(".family .click"),
+      $life = $(".life"),
+      $lifeClick = $(".life .click");
+    var onOff = true;
+    $(".navOnOff").click(function () {
+      // onOff가 true면 클릭시 block
+      // --------------------------------------------------------------------------------------------
+
+      if (onOff) {
+        $(".MediaNavWrap").css({ display: "block" });
+        $(this).addClass("exit");
+        // 다른애들 끄기
+        $(".playWrap").css({ display: "none" });
+        $(".slick-dots").css({ display: "none" });
+        $(".dropDownSection").css({ display: "none" });
+        // 다른애들 끄기
+
+        onOff = false;
+        // =========================
+        $family.click(function () {
+          $lifeClick.css({ display: "none" });
+          $familyClick.slideToggle(
+            function () {
+              $familyClick.addClass("show");
+            },
+            function () {
+              $familyClick.addClass("hide");
+            }
+          );
+        });
+        $life.click(function () {
+          $familyClick.css({ display: "none" });
+          $lifeClick.slideToggle(
+            function () {
+              $lifeClick.addClass("show");
+            },
+            function () {
+              $lifeClick.addClass("hide");
+            }
+          );
+        });
+        // =============================
+      } else {
+        $(".MediaNavWrap").css({ display: "none" });
+        $(this).removeClass("exit");
+        // 다른애들 끄기
+        $(".playWrap").css({ display: "block" });
+        $(".slick-dots").css({ display: "block" });
+        $(".dropDownSection").css({ display: "block" });
+        // 다른애들 끄기
+        onOff = true;
+      }
+    });
+  });
+  // 마우스 스크롤 & 터치 막기
+  $(".MediaNavWrap").on("scroll touchmove mousewheel", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+  });
+  // 마우스 스크롤 & 터치 막기
+
   // media에 따른 bar 크기 관리
   // ////////////////////////////////////////////////////////////////////////
   // 숫자 count
