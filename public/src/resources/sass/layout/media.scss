@@ -388,7 +388,9 @@
           .head {
             font-size: 20px;
             border-right: none;
-            padding-bottom: 16px;
+            // padding-bottom: 16px;
+            padding-top: 0px;
+            padding-bottom: 8px;
           }
           &:first-child li {
             width: 100%;

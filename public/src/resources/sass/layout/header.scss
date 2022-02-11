@@ -15,7 +15,7 @@
   z-index: 1;
   .deepMenuOn {
     @include WH(100%, 0);
-    @include apsolutePos(100px, 0, 0, 0, $transform: false);
+    @include apsolutePos(110px, 0, 0, 0, $transform: false);
     background-color: white;
     transition: max-height 0.35s ease;
     overflow: hidden;
@@ -87,7 +87,7 @@
           padding: 45px 0 40px;
           position: relative;
           &::after {
-            @include apsolutePos(none, none, 9px, 50%, $transform: true);
+            @include apsolutePos(none, none, 0, 50%, $transform: true);
             @include WH(0, 3px);
             content: "";
             background-color: #000;

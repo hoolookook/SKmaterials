@@ -203,6 +203,12 @@ button {
     margin: 0 auto;
 }
 
+.fixed {
+    /* the class that will be applied */
+    position: fixed;
+    bottom: 0;
+}
+
 body {
     font-family: "Noto Sans Korean", "Malgun Gothic", "돋움", "dotum", "AppleGothic", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -212,18 +218,6 @@ body {
 
 a {
     color: #000000;
-}
-
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
-}
-
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
 }
 
 /* Slider */
@@ -337,15 +331,14 @@ a {
     position: absolute;
     top: none;
     right: none;
-    bottom: 200px;
+    bottom: 181px;
     left: 50%;
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
+    -webkit-transform: translate(-328%);
+    -moz-transform: translate(-328%);
+    -ms-transform: translate(-328%);
+    transform: translate(-328%);
     height: auto;
     max-width: 1170px;
-    width: 100%;
     z-index: 1;
     display: -webkit-box;
     display: -webkit-flex;
@@ -370,7 +363,6 @@ a {
 }
 
 .slick-dots .progressBar .line {
-    width: 60px;
     height: 2px;
     background-color: #fff;
     -webkit-animation: slidein 16s;
@@ -738,12 +730,6 @@ a {
     }
 }
 
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
-}
-
 #header {
     width: 100%;
     height: 110px;
@@ -755,11 +741,21 @@ a {
     z-index: 1;
 }
 
+#header.headerFixed {
+    z-index: 5;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #header .deepMenuOn {
     width: 100%;
     height: 0;
     position: absolute;
-    top: 100px;
+    top: 110px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -773,7 +769,7 @@ a {
 #header .headerWrap {
     max-width: 1170px;
     width: 100%;
-    height: 110px;
+    height: auto;
     position: absolute;
     top: 0;
     right: 0;
@@ -794,6 +790,76 @@ a {
     width: 364px;
     height: 50px;
     opacity: 1;
+}
+
+#header .headerWrap .navOnOff {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    bottom: none;
+    left: none;
+    background-color: black;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    z-index: 301;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#header .headerWrap .navOnOff::before,
+#header .headerWrap .navOnOff::after {
+    content: "";
+    background-color: #fff;
+}
+
+#header .headerWrap .navOnOff::before {
+    width: 25px;
+    height: 4px;
+    position: absolute;
+    top: 18px;
+    right: none;
+    bottom: none;
+    left: 12px;
+}
+
+#header .headerWrap .navOnOff::after {
+    width: 20px;
+    height: 4px;
+    position: absolute;
+    top: 28px;
+    right: none;
+    bottom: none;
+    left: 12px;
+}
+
+#header .headerWrap .exit {
+    background-color: #fff;
+}
+
+#header .headerWrap .exit::before {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    -moz-transform: translateX(-50%) rotate(-45deg);
+    -ms-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#header .headerWrap .exit::after {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#header .headerWrap .exit::before,
+#header .headerWrap .exit::after {
+    top: 23px;
+    left: 50%;
+    width: 30px;
+    background-color: #000;
 }
 
 #header .headerWrap .navWrap {
@@ -817,7 +883,7 @@ a {
     position: absolute;
     top: none;
     right: none;
-    bottom: 9px;
+    bottom: 0;
     left: 50%;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
@@ -910,10 +976,60 @@ a {
     padding: 35px 12px 52px;
 }
 
-.fixed {
-    /* the class that will be applied */
+#header .headerWrap .MediaNavWrap {
+    display: none;
     position: fixed;
-    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 300;
+}
+
+#header .headerWrap .MediaNavWrap .wrap {
+    position: relative;
+    padding: 144px 20px;
+    width: 100%;
+    height: auto;
+    background: black;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .click li {
+    padding: 27px 0;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .click li:first-child {
+    padding-top: 75px;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .click li a {
+    font-size: 27px;
+}
+
+#header .headerWrap .MediaNavWrap .wrap li {
+    text-align: center;
+}
+
+#header .headerWrap .MediaNavWrap .wrap li a {
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .firstNav {
+    padding: 31.5px 0;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .firstNav .click {
+    display: none;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .firstNav .show {
+    display: block;
+}
+
+#header .headerWrap .MediaNavWrap .wrap .firstNav .hide {
+    display: none;
 }
 
 #contents {
@@ -921,31 +1037,36 @@ a {
     height: 100vh;
 }
 
-#contents #playPause {
+#contents .playWrap {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+#contents .playWrap #playPause {
     position: absolute;
     top: none;
-    right: none;
-    bottom: 200px;
-    left: 50%;
-    -webkit-transform: translate(-357px);
-    -moz-transform: translate(-357px);
-    -ms-transform: translate(-357px);
-    transform: translate(-357px);
+    right: 0;
+    bottom: 184px;
+    left: none;
+    padding-right: 75%;
     display: block;
     z-index: 15;
 }
 
-#contents #playPause button {
+#contents .playWrap #playPause button {
     margin: 0 7px;
     background-color: transparent;
     background-repeat: no-repeat;
 }
 
-#contents #playPause button:focus {
+#contents .playWrap #playPause button:focus {
     opacity: 1;
 }
 
-#contents #playPause .play {
+#contents .playWrap #playPause .play {
     width: 15px;
     height: 15px;
     background-repeat: no-repeat;
@@ -955,7 +1076,7 @@ a {
     opacity: 1;
 }
 
-#contents #playPause .pause {
+#contents .playWrap #playPause .pause {
     width: 15px;
     height: 15px;
     background-repeat: no-repeat;
@@ -1051,15 +1172,19 @@ a {
     z-index: 1;
 }
 
-#contents .dropDownSection .wrap .container {
+#contents .dropDownSection .wrap {
     margin: 0 auto;
     max-width: 1170px;
-    width: 100%;
-    height: 130px;
+    width: auto;
+    height: auto;
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
     border-radius: 30px 30px 0 0;
     background-color: #4b4b4b;
+}
+
+#contents .dropDownSection .wrap .container {
+    padding: 30px 60px 40px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -1085,13 +1210,16 @@ a {
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 #contents .dropDownSection .wrap .container select,
 #contents .dropDownSection .wrap .container input,
 #contents .dropDownSection .wrap .container select option {
     width: 300px;
-    height: 55px;
+    height: 48px;
     font-size: 20px;
     border: 0;
     font-weight: 500;
@@ -1099,6 +1227,7 @@ a {
 }
 
 #contents .dropDownSection .wrap .container select {
+    width: 28.5%;
     background: transparent;
     background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
     background-repeat: no-repeat;
@@ -1116,6 +1245,7 @@ a {
 }
 
 #contents .dropDownSection .wrap .container input {
+    width: 28.5%;
     background: transparent;
     color: white;
 }
@@ -1141,8 +1271,9 @@ a {
 }
 
 #contents .dropDownSection .wrap .container .searchBtn {
-    width: 60px;
-    height: 60px;
+    width: 28.5%;
+    width: 48px;
+    height: 48px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -1151,12 +1282,6 @@ a {
 #contents .dropDownSection .wrap .container .searchBtn img {
     max-width: 100%;
     width: 100%;
-}
-
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
 }
 
 #fullpage {
@@ -1265,7 +1390,7 @@ a {
 }
 
 #fullpage .cardSection .card .titleBox .recruitWrap .wrap a:hover .select {
-    right: 110px;
+    right: 21px;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
@@ -1655,7 +1780,7 @@ a {
 }
 
 #fullpage #fixed .recruitWrap .leftArea li .recruit {
-    margin-right: 40px;
+    margin-right: 20px;
     line-height: 26px;
 }
 
@@ -1748,12 +1873,6 @@ a {
 
 #fullpage #fixed .recruitWrap .rightAria li:last-child {
     margin-left: 40px;
-}
-
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
 }
 
 #footer {
@@ -1896,26 +2015,54 @@ a {
     padding-left: 15px;
 }
 
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
-}
-
-@media screen and (max-width: 575px) {
-    #header .headerWrap .logo a img {
-        width: 216px;
-        height: 30px;
-    }
-}
-
 @media screen and (max-width: 1199px) {
-    #header .headerWrap {
-        margin-left: 20px;
-        margin-right: 20px;
+    #header {
+        height: 99px;
+    }
+
+    #header .headerWrap .logo {
+        padding: 12px 0 0 20px;
+    }
+
+    #header .headerWrap .logo a img {
+        width: 329px;
+        height: 45px;
+    }
+
+    #header .headerWrap .navWrap {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        z-index: 300;
+    }
+
+    #header .headerWrap .navOnOff {
+        display: block;
+    }
+
+    #contents .slick-dots {
+        -webkit-column-gap: 35px;
+        -moz-column-gap: 35px;
+        column-gap: 35px;
+    }
+
+    #contents .slick-dots li button::before {
+        font-size: 14px;
+    }
+
+    #contents .playWrap #playPause {
+        padding-right: 72%;
     }
 
     #contents .videoSection .slick-dots {
+        -webkit-transform: translate(-318%);
+        -moz-transform: translate(-318%);
+        -ms-transform: translate(-318%);
+        transform: translate(-318%);
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -2080,16 +2227,82 @@ a {
 }
 
 @media screen and (max-width: 991px) {
-    #contents .videoSection h2 {
-        font-size: 68px;
+    #header {
+        height: 74px;
     }
 
-    #contents .dropDownSection .container select {
-        font-size: 18px;
+    #header .headerWrap .logo a img {
+        width: 290px;
+        height: 40px;
     }
 
-    #contents .dropDownSection .container select option {
-        font-size: 18px;
+    #header .headerWrap .MediaNavWrap .wrap {
+        padding: 128px 20px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li {
+        padding: 24px 0;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li:first-child {
+        padding-top: 60px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li a {
+        font-size: 24px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap li a {
+        font-size: 40px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .firstNav {
+        padding: 28px 0;
+    }
+
+    #contents .playWrap #playPause {
+        padding-right: 35%;
+    }
+
+    #contents .videoSection .videoTitle {
+        top: 40%;
+    }
+
+    #contents .videoSection .videoTitle h2 {
+        text-align: center;
+        font-size: 61px;
+    }
+
+    #contents .videoSection .slick-dots {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        -webkit-transform: translate(-87%);
+        -moz-transform: translate(-87%);
+        -ms-transform: translate(-87%);
+        transform: translate(-87%);
+    }
+
+    #contents .videoSection .slick-dots .progressBar {
+        width: 48px;
+    }
+
+    #contents .videoSection .slick-dots li button::before {
+        font-size: 13px;
+    }
+
+    #contents .dropDownSection .wrap .container {
+        padding: 24px 48px 32px;
+    }
+
+    #contents .dropDownSection .wrap .container select,
+    #contents .dropDownSection .wrap .container input {
+        font-size: 16px;
+    }
+
+    #contents .dropDownSection .wrap .container select option,
+    #contents .dropDownSection .wrap .container input option {
+        font-size: 16px;
     }
 
     #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
@@ -2106,10 +2319,6 @@ a {
         right: 24px;
     }
 
-    #fullpage .cardSection .card .titleBox .padd {
-        padding-bottom: 28px;
-    }
-
     #fullpage .freeSection {
         padding: 128px 0;
     }
@@ -2120,10 +2329,6 @@ a {
 
     #fullpage .freeSection .opportunity .oppoDetail {
         padding: 32px 0 0 0;
-    }
-
-    #fullpage .freeSection .opportunity .oppoDetail .standard {
-        padding: 18px 0 0 0;
     }
 
     #fullpage .freeSection .container:first-child h3 {
@@ -2186,7 +2391,8 @@ a {
     #fullpage #fixed .recruitWrap .leftArea .head {
         font-size: 20px;
         border-right: none;
-        padding-bottom: 16px;
+        padding-top: 0px;
+        padding-bottom: 8px;
     }
 
     #fullpage #fixed .recruitWrap .leftArea:first-child li {
@@ -2232,15 +2438,6 @@ a {
         display: none;
     }
 
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
-        top: 2px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
-        top: 9px;
-        right: -3px;
-    }
-
     #fullpage .larTitle {
         font-size: 2.3125rem;
     }
@@ -2269,16 +2466,85 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-    #contents .videoSection h2 {
-        font-size: 68px;
+    #header .headerWrap .logo a img {
+        width: 255px;
+        height: 35px;
     }
 
-    #contents .dropDownSection .container select {
-        font-size: 18px;
+    #header .headerWrap .MediaNavWrap .wrap {
+        padding: 112px 20px;
     }
 
-    #contents .dropDownSection .container select option {
-        font-size: 18px;
+    #header .headerWrap .MediaNavWrap .wrap .click li {
+        padding: 21px 0;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li:first-child {
+        padding-top: 51px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li a {
+        font-size: 21px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .firstNav {
+        padding-top: 24.5px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap li a {
+        font-size: 35px;
+    }
+
+    #contents .playWrap #playPause {
+        bottom: 143px;
+    }
+
+    #contents .videoSection .slick-dots {
+        bottom: 140px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+
+    #contents .videoSection .slick-dots .progressBar {
+        width: 42px;
+    }
+
+    #contents .videoSection .slick-dots li button::before {
+        font-size: 11px;
+    }
+
+    #contents .videoSection .videoTitle h2 {
+        font-size: 53px;
+    }
+
+    #contents .dropDownSection .wrap .container {
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        padding: 21px 42px 28px;
+    }
+
+    #contents .dropDownSection .wrap .container .searchBtn {
+        width: 42px;
+        height: 42px;
+    }
+
+    #contents .dropDownSection .wrap .container select {
+        font-size: 13px;
+        height: 42px;
+        background-position-y: 14px;
+        -moz-background-size: 11px 6px;
+        background-size: 11px 6px;
+    }
+
+    #contents .dropDownSection .wrap .container select option {
+        font-size: 13px;
+    }
+
+    #contents .dropDownSection .wrap .container input {
+        font-size: 13px;
+        height: 42px;
     }
 
     #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
@@ -2327,10 +2593,6 @@ a {
         padding-top: 56px;
     }
 
-    #fullpage .freeSection .container .grow .growBox .growDetail {
-        padding-top: 16px;
-    }
-
     #fullpage #fixed .toTop {
         width: 75px;
         height: 75px;
@@ -2371,16 +2633,7 @@ a {
 
     #fullpage #fixed .recruitWrap .leftArea .head {
         font-size: 18px;
-        border-right: none;
         padding-bottom: 8px;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea:first-child li {
-        width: 100%;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea li {
-        display: inline-block;
     }
 
     #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
@@ -2400,31 +2653,8 @@ a {
         width: 50%;
     }
 
-    #fullpage #fixed .recruitWrap .rightAria li {
-        width: 34%;
-        height: 41px;
-        line-height: 41px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li:last-child {
-        margin-left: 0;
-    }
-
     #fullpage #fixed .recruitWrap .rightAria li .recruit {
         font-size: 11px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
-        display: none;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
-        top: 2px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
-        top: 9px;
-        right: -3px;
     }
 
     #fullpage .larTitle {
@@ -2459,16 +2689,123 @@ a {
 }
 
 @media screen and (max-width: 575px) {
-    #contents .videoSection h2 {
-        font-size: 68px;
+    #header {
+        height: 55px;
     }
 
-    #contents .dropDownSection .container select {
+    #header .headerWrap .navOnOff {
+        width: 35px;
+        height: 35px;
+    }
+
+    #header .headerWrap .navOnOff::before {
+        width: 11px;
+        height: 2px;
+        top: 20px;
+    }
+
+    #header .headerWrap .navOnOff:after {
+        width: 16px;
+        height: 2px;
+        top: 14px;
+        left: 11px;
+    }
+
+    #header .headerWrap .exit::before,
+    #header .headerWrap .exit::after {
+        top: 17px;
+        left: 50%;
+        width: 19px;
+    }
+
+    #header .headerWrap .logo a img {
+        width: 216px;
+        height: 30px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li {
+        padding: 18px 0;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li:first-child {
+        padding-top: 45px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li a {
         font-size: 18px;
     }
 
-    #contents .dropDownSection .container select option {
+    #header .headerWrap .MediaNavWrap .wrap .firstNav {
+        padding: 21px 0;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap li a {
+        font-size: 30px;
+    }
+
+    #contents .playWrap #playPause {
+        bottom: 234px;
+        padding-right: 19%;
+    }
+
+    #contents .videoSection .slick-dots {
+        bottom: 233px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -webkit-transform: translate(-91%);
+        -moz-transform: translate(-91%);
+        -ms-transform: translate(-91%);
+        transform: translate(-91%);
+    }
+
+    #contents .videoSection .slick-dots .progressBar {
+        width: 36px;
+    }
+
+    #contents .videoSection .slick-dots li button::before {
+        font-size: 13px;
+    }
+
+    #contents .videoSection .videoTitle {
+        top: 32%;
+    }
+
+    #contents .videoSection .videoTitle h2 {
+        font-size: 36px;
+    }
+
+    #contents .dropDownSection .wrap .container {
+        row-gap: 15px;
+        padding: 18px 24px 24px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    #contents .dropDownSection .wrap .container select,
+    #contents .dropDownSection .wrap .container input {
+        width: 100%;
+        font-size: 17px;
+        padding: 12px 0;
+        height: auto;
+    }
+
+    #contents .dropDownSection .wrap .container select option,
+    #contents .dropDownSection .wrap .container input option {
         font-size: 18px;
+    }
+
+    #contents .dropDownSection .wrap .container .searchBtn {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        right: 47px;
+        bottom: 37px;
     }
 
     #fullpage .cardSection .card .titleBox .lineBreak {
@@ -2499,14 +2836,6 @@ a {
 
     #fullpage .freeSection .opportunity {
         padding: 72px 0 0;
-    }
-
-    #fullpage .freeSection .opportunity .grow .growBox .circle strong {
-        font-size: 14px;
-    }
-
-    #fullpage .freeSection .opportunity .oppoDetail {
-        padding: 28px 0 0 0;
     }
 
     #fullpage .freeSection .opportunity .oppoDetail .standard {
@@ -2542,10 +2871,6 @@ a {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    }
-
-    #fullpage .freeSection .container .grow .growBox .growDetail {
-        padding-top: 16px;
     }
 
     #fullpage #fixed .toTop {
@@ -2598,19 +2923,11 @@ a {
     }
 
     #fullpage #fixed .recruitWrap .leftArea .head {
-        font-size: 18px;
-        border-right: none;
-        padding-bottom: 8px;
         display: none;
     }
 
     #fullpage #fixed .recruitWrap .leftArea:first-child li {
-        width: 100%;
         text-align: center;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea li {
-        display: inline-block;
     }
 
     #fullpage #fixed .recruitWrap .leftArea li .recruit {
@@ -2623,44 +2940,16 @@ a {
     }
 
     #fullpage #fixed .recruitWrap .rightAria {
-        gap: 20px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -moz-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
         width: 100%;
         margin-right: 0;
     }
 
     #fullpage #fixed .recruitWrap .rightAria li {
         width: 40%;
-        height: 41px;
-        line-height: 41px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li:last-child {
-        margin-left: 0;
     }
 
     #fullpage #fixed .recruitWrap .rightAria li .recruit {
         font-size: 14px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
-        display: none;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
-        top: 2px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
-        top: 9px;
-        right: -3px;
     }
 
     #fullpage .larTitle {
@@ -2669,10 +2958,6 @@ a {
 
     #fullpage .smTitle {
         font-size: 1.0625rem;
-    }
-
-    #fullpage .midTitle {
-        font-size: 1.3125rem;
     }
 
     #footer .wrap .container .footerNavWrap .footerLogo {
@@ -2735,6 +3020,10 @@ a {
 }
 
 @media screen and (max-width: 481px) {
+    #header {
+        height: 55px;
+    }
+
     #contents .videoSection h2 {
         font-size: 68px;
     }
@@ -2745,10 +3034,6 @@ a {
 
     #contents .dropDownSection .container select option {
         font-size: 18px;
-    }
-
-    #fullpage .cardSection .card .titleBox .lineBreak {
-        display: block;
     }
 
     #fullpage .cardSection .card .titleBox .recruitWrap .wrap {
@@ -2764,83 +3049,8 @@ a {
         right: 117px;
     }
 
-    #fullpage .cardSection .card .titleBox .padd {
-        padding-bottom: 18px;
-    }
-
-    #fullpage .freeSection {
-        padding: 96px 0;
-    }
-
-    #fullpage .freeSection .opportunity {
-        padding: 72px 0 0;
-    }
-
-    #fullpage .freeSection .opportunity .grow .growBox .circle strong {
-        font-size: 14px;
-    }
-
-    #fullpage .freeSection .opportunity .oppoDetail {
-        padding: 28px 0 0 0;
-    }
-
-    #fullpage .freeSection .opportunity .oppoDetail .standard {
-        padding: 18px 0 0 0;
-    }
-
-    #fullpage .freeSection .container:first-child h3 {
-        padding-bottom: 0;
-    }
-
-    #fullpage .freeSection .container #growH {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -moz-box-orient: vertical;
-        -moz-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -moz-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-
-    #fullpage .freeSection .container #growH .growBox {
-        width: 90%;
-        padding-top: 96px;
-    }
-
-    #fullpage .freeSection .container .grow {
-        padding-top: 48px;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-
-    #fullpage .freeSection .container .grow .growBox .growDetail {
-        padding-top: 16px;
-    }
-
     #fullpage #fixed .toTop {
-        width: 60px;
-        height: 60px;
-        bottom: 110px;
-    }
-
-    #fullpage #fixed .toTop .select {
-        top: 16px;
-        left: 25px;
-        width: 11px;
-        height: 5px;
-        -moz-background-size: 11px 5px;
-        background-size: 11px 5px;
-    }
-
-    #fullpage #fixed .toTop p {
-        font-size: 14px;
-        padding: 15px 0 0px;
+        bottom: 90px;
     }
 
     #fullpage #fixed .recruitWrap {
@@ -2866,140 +3076,229 @@ a {
         width: 100%;
     }
 
-    #fullpage #fixed .recruitWrap .leftArea .head {
-        font-size: 18px;
-        border-right: none;
-        padding-bottom: 8px;
-        display: none;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea:first-child li {
-        width: 100%;
-        text-align: center;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea li {
-        display: inline-block;
-    }
-
-    #fullpage #fixed .recruitWrap .leftArea li .recruit {
-        margin-right: 0;
-        padding: 0 10px;
-    }
-
     #fullpage #fixed .recruitWrap .leftArea li .recruit:not(.head) {
         font-size: 13px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria {
-        gap: 20px;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -moz-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-right: 0;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li {
-        width: 40%;
-        height: 41px;
-        line-height: 41px;
-    }
-
-    #fullpage #fixed .recruitWrap .rightAria li:last-child {
-        margin-left: 0;
     }
 
     #fullpage #fixed .recruitWrap .rightAria li .recruit {
         font-size: 13px;
     }
 
-    #fullpage #fixed .recruitWrap .rightAria li .recruit .hide {
-        display: none;
+    #footer .wrap .copyRight .ulWrap li {
+        padding: 6px 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap li p {
+        font-size: 13px;
+    }
+
+    #footer .wrap .copyRight .ulWrap li p:not(.ind) {
+        padding-left: 0;
+    }
+
+    #footer .wrap .copyRight .ulWrap li .ind::before {
+        content: "";
+    }
+}
+
+@media screen and (max-width: 393px) {
+    #contents .videoSection h2 {
+        font-size: 68px;
+    }
+
+    #contents .dropDownSection .container select {
+        font-size: 18px;
+    }
+
+    #contents .dropDownSection .container select option {
+        font-size: 18px;
+    }
+
+    #fullpage .freeSection {
+        padding: 60px 0;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .circle {
+        width: 70%;
+        padding-bottom: 70%;
+    }
+
+    #fullpage .freeSection .container .grow .growBox .circle .chart .bar {
+        padding: 0 0.375rem;
+    }
+
+    #fullpage .cardSection .card .titleBox .recruitWrap .wrap a {
+        font-size: 15px;
+    }
+
+    #fullpage #fixed .toTop {
+        width: 45px;
+        height: 45px;
+        right: 0px;
+    }
+
+    #fullpage #fixed .toTop .select {
+        top: 12px;
+        left: 17px;
+    }
+
+    #fullpage #fixed .toTop p {
+        font-size: 11px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap {
+        width: 360px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a {
+        padding: 27px;
+        font-size: 18px;
+    }
+
+    #fullpage #fixed .recruitWrap .wrap a .select {
+        top: 29px;
+        right: 26px;
+    }
+
+    #fullpage #fixed .recruitWrap .leftArea {
+        margin-left: 6px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li {
+        height: 30px;
+        line-height: 25px;
+    }
+
+    #fullpage #fixed .recruitWrap .rightAria li .recruit {
+        font-size: 11px;
     }
 
     #fullpage #fixed .recruitWrap .rightAria li .recruit .select {
-        top: 2px;
+        right: -24px;
     }
 
     #fullpage #fixed .recruitWrap .rightAria li .recruit .ring .insideRing {
-        top: 9px;
-        right: -3px;
+        right: 1px;
     }
 
     #fullpage .larTitle {
-        font-size: 1.6875rem;
-    }
-
-    #fullpage .smTitle {
-        font-size: 1.0625rem;
+        font-size: 1.2875rem;
     }
 
     #fullpage .midTitle {
-        font-size: 1.3125rem;
+        font-size: 1.0125rem;
     }
 
-    #footer .wrap .container .footerNavWrap .footerLogo {
-        padding-top: 36px;
-    }
-
-    #footer .wrap .container .footerNavWrap .footerLogo img {
-        width: 78px;
-        height: 29px;
-    }
-
-    #footer .wrap .container .footerNavWrap .introduceWrap {
-        padding: 90px 0 36px 0;
-    }
-
-    #footer .wrap .container .footerNavWrap .introduceWrap ul {
-        width: auto;
-        margin: 0;
-        padding: 18px 0;
+    #fullpage .smTitle {
+        font-size: 0.8rem;
     }
 
     #footer .wrap .container .footerNavWrap .introduceWrap ul strong,
     #footer .wrap .container .footerNavWrap .introduceWrap ul li {
-        font-size: 14px !important;
-    }
-
-    #footer .wrap .copyRight .ulWrap .copyWrap {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -moz-box-orient: vertical;
-        -moz-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-        -moz-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-
-    #footer .wrap .copyRight .ulWrap .copyWrap li {
-        padding: 6px 0;
+        font-size: 11px !important;
     }
 
     #footer .wrap .copyRight .ulWrap .copyWrap li p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 294px) {
+    #header .headerWrap .navOnOff {
+        width: 25px;
+        height: 25px;
+        top: 14px;
+        right: 14px;
+    }
+
+    #header .headerWrap .navOnOff::after {
+        width: 11px;
+        height: 2px;
+        top: 10px;
+        left: 8px;
+    }
+
+    #header .headerWrap .navOnOff::before {
+        width: 7px;
+        height: 2px;
+        top: 16px;
+        left: 9px;
+    }
+
+    #header .headerWrap .exit::before,
+    #header .headerWrap .exit:after {
+        width: 13px;
+        top: 12px;
+    }
+
+    #header .headerWrap .exit::before {
+        left: 13px;
+    }
+
+    #header .headerWrap .exit:after {
+        left: 13px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li {
+        padding: 10px 0;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li:first-child {
+        padding-top: 30px;
+    }
+
+    #header .headerWrap .MediaNavWrap .wrap .click li a {
         font-size: 13px;
     }
 
-    #footer .wrap .copyRight .ulWrap .copyWrap li p:not(.ind) {
-        padding-left: 0;
+    #header .headerWrap .MediaNavWrap .wrap .firstNav {
+        padding: 11px 0;
     }
 
-    #footer .wrap .copyRight .ulWrap .copyWrap li .ind::before {
-        content: "";
+    #header .headerWrap .MediaNavWrap .wrap li a {
+        font-size: 20px;
+    }
+
+    #contents .playWrap #playPause {
+        bottom: 231px;
+        padding-right: 39%;
+    }
+
+    #contents .videoSection .slick-dots {
+        bottom: 267px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+        -webkit-transform: translate(-67%);
+        -moz-transform: translate(-67%);
+        -ms-transform: translate(-67%);
+        transform: translate(-67%);
+    }
+
+    #contents .videoSection .slick-dots .progressBar {
+        width: 36px;
+    }
+
+    #contents .videoSection .slick-dots li button::before {
+        font-size: 13px;
+    }
+
+    #contents .videoSection .videoTitle {
+        top: 32%;
+    }
+
+    #contents .videoSection .videoTitle h2 {
+        font-size: 36px;
+    }
+
+    #contents .dropDownSection .wrap .container select,
+    #contents .dropDownSection .wrap .container input {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+
+    #contents .dropDownSection .wrap .container .searchBtn {
+        bottom: 29px;
     }
 }
 

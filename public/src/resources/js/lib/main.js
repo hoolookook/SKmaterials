@@ -229,7 +229,7 @@ $(document).ready(function () {
   });
   $(".mtFam, .mtLife").mouseenter(function () {
     $(".deepMenuOn").css({
-      height: "30px",
+      height: "100px",
       transition: "height 0.35s ease",
       "border-top": "1px solid #d9d9d9",
     });

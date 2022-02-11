@@ -1,39 +1,38 @@
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
-}
-
 #contents {
     width: 100vw;
     height: 100vh;
 }
 
-#contents #playPause {
+#contents .playWrap {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+#contents .playWrap #playPause {
     position: absolute;
     top: none;
-    right: none;
-    bottom: 200px;
-    left: 50%;
-    -webkit-transform: translate(-357px);
-    -moz-transform: translate(-357px);
-    -ms-transform: translate(-357px);
-    transform: translate(-357px);
+    right: 0;
+    bottom: 184px;
+    left: none;
+    padding-right: 75%;
     display: block;
     z-index: 15;
 }
 
-#contents #playPause button {
+#contents .playWrap #playPause button {
     margin: 0 7px;
     background-color: transparent;
     background-repeat: no-repeat;
 }
 
-#contents #playPause button:focus {
+#contents .playWrap #playPause button:focus {
     opacity: 1;
 }
 
-#contents #playPause .play {
+#contents .playWrap #playPause .play {
     width: 15px;
     height: 15px;
     background-repeat: no-repeat;
@@ -43,7 +42,7 @@
     opacity: 1;
 }
 
-#contents #playPause .pause {
+#contents .playWrap #playPause .pause {
     width: 15px;
     height: 15px;
     background-repeat: no-repeat;
@@ -139,15 +138,19 @@
     z-index: 1;
 }
 
-#contents .dropDownSection .wrap .container {
+#contents .dropDownSection .wrap {
     margin: 0 auto;
     max-width: 1170px;
-    width: 100%;
-    height: 130px;
+    width: auto;
+    height: auto;
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
     border-radius: 30px 30px 0 0;
     background-color: #4b4b4b;
+}
+
+#contents .dropDownSection .wrap .container {
+    padding: 30px 60px 40px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -173,13 +176,16 @@
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 #contents .dropDownSection .wrap .container select,
 #contents .dropDownSection .wrap .container input,
 #contents .dropDownSection .wrap .container select option {
     width: 300px;
-    height: 55px;
+    height: 48px;
     font-size: 20px;
     border: 0;
     font-weight: 500;
@@ -187,6 +193,7 @@
 }
 
 #contents .dropDownSection .wrap .container select {
+    width: 28.5%;
     background: transparent;
     background-image: url(/public/src/resources/images/icons/form-select-arrow-white.png);
     background-repeat: no-repeat;
@@ -204,6 +211,7 @@
 }
 
 #contents .dropDownSection .wrap .container input {
+    width: 28.5%;
     background: transparent;
     color: white;
 }
@@ -229,8 +237,9 @@
 }
 
 #contents .dropDownSection .wrap .container .searchBtn {
-    width: 60px;
-    height: 60px;
+    width: 28.5%;
+    width: 48px;
+    height: 48px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;

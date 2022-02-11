@@ -202,3 +202,9 @@ button {
     max-width: 1170px;
     margin: 0 auto;
 }
+
+.fixed {
+    /* the class that will be applied */
+    position: fixed;
+    bottom: 0;
+}

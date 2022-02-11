@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-.fixed {
-    /* the class that will be applied */
-    position: fixed;
-    bottom: 0;
-}
-
 /* Slider */
 .slick-loading .slick-list {
     background: #fff center center no-repeat;
@@ -117,15 +111,14 @@
     position: absolute;
     top: none;
     right: none;
-    bottom: 200px;
+    bottom: 181px;
     left: 50%;
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
+    -webkit-transform: translate(-328%);
+    -moz-transform: translate(-328%);
+    -ms-transform: translate(-328%);
+    transform: translate(-328%);
     height: auto;
     max-width: 1170px;
-    width: 100%;
     z-index: 1;
     display: -webkit-box;
     display: -webkit-flex;
@@ -150,7 +143,6 @@
 }
 
 .slick-dots .progressBar .line {
-    width: 60px;
     height: 2px;
     background-color: #fff;
     -webkit-animation: slidein 16s;
