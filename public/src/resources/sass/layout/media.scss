@@ -2,8 +2,11 @@
 
 @media screen and (max-width: 1199px) {
   #header {
+    height: 99px;
     .headerWrap {
       .logo {
+        // padding: 12px 0 12px 20px;
+        padding: 12px 0 0 20px;
         a {
           img {
             @include WH(329px, 45px);
@@ -23,8 +26,8 @@
       .navOnOff {
         display: block;
       }
-      margin-left: 20px;
-      margin-right: 20px;
+      // margin-left: 20px;
+      // margin-right: 20px;
     }
   }
   #contents {
@@ -229,6 +232,7 @@
 }
 @media screen and (max-width: 991px) {
   #header {
+    height: 74px;
     .headerWrap {
       .logo {
         a {
@@ -706,6 +710,7 @@
 }
 @media screen and (max-width: 575px) {
   #header {
+    height: 55px;
     .headerWrap {
       .navOnOff {
         &::before {
@@ -992,6 +997,9 @@
   }
 }
 @media screen and (max-width: 481px) {
+  #header {
+    height: 55px;
+  }
   #contents {
     .videoSection {
       h2 {
@@ -1144,7 +1152,7 @@
       .toTop {
         width: 45px;
         height: 45px;
-        right: 26px;
+        right: 0px;
         .select {
           top: 12px;
           left: 17px;
@@ -1226,6 +1234,64 @@
   }
 }
 @media screen and (max-width: 294px) {
+  #header {
+    .headerWrap {
+      .navOnOff {
+        width: 25px;
+        height: 25px;
+        top: 14px;
+        right: 14px;
+        &::after {
+          width: 11px;
+          height: 2px;
+          top: 10px;
+          left: 8px;
+        }
+        &::before {
+          width: 7px;
+          height: 2px;
+          top: 16px;
+          left: 9px;
+        }
+      }
+      .exit {
+        &::before,
+        &:after {
+          width: 13px;
+          top: 12px;
+        }
+        &::before {
+          left: 13px;
+        }
+        &:after {
+          left: 13px;
+        }
+      }
+      .MediaNavWrap {
+        .wrap {
+          .click {
+            li {
+              &:first-child {
+                padding-top: 30px;
+              }
+              padding: 10px 0;
+              a {
+                font-size: 13px;
+              }
+            }
+          }
+          .firstNav {
+            padding: 11px 0;
+          }
+          li {
+            a {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
   #contents {
     .playWrap {
       #playPause {
@@ -1266,39 +1332,6 @@
           }
           .searchBtn {
             bottom: 29px;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 294px) {
-  #header {
-    .headerWrap {
-      .navOnOff {
-        top: 5px;
-        right: 24px;
-      }
-      .MediaNavWrap {
-        .wrap {
-          .click {
-            li {
-              &:first-child {
-                padding-top: 30px;
-              }
-              padding: 10px 0;
-              a {
-                font-size: 13px;
-              }
-            }
-          }
-          .firstNav {
-            padding: 11px 0;
-          }
-          li {
-            a {
-              font-size: 20px;
-            }
           }
         }
       }

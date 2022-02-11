@@ -128,6 +128,7 @@ $(document).ready(function () {
       $life = $(".life"),
       $lifeClick = $(".life .click");
     var onOff = true;
+    var scrollLock = false;
     $(".navOnOff").click(function () {
       // onOff가 true면 클릭시 block
       // --------------------------------------------------------------------------------------------
@@ -136,34 +137,24 @@ $(document).ready(function () {
         $(".MediaNavWrap").css({ display: "block" });
         $(this).addClass("exit");
         // 다른애들 끄기
-        $(".playWrap").css({ display: "none" });
-        $(".slick-dots").css({ display: "none" });
-        $(".dropDownSection").css({ display: "none" });
+        $(".playWrap")
+          .css({ display: "none" })
+          .css({ "background-color": "black" });
+        // $(".videoSection").css({ display: "none" });
+        // $(".slick-dots").css({ display: "none" });
+        // $(".dropDownSection").css({ display: "none" });
+        $("#header").addClass("headerFixed");
+        $("body").css({ overflow: "hidden", height: "100%" });
         // 다른애들 끄기
-
         onOff = false;
         // =========================
         $family.click(function () {
           $lifeClick.css({ display: "none" });
-          $familyClick.slideToggle(
-            function () {
-              $familyClick.addClass("show");
-            },
-            function () {
-              $familyClick.addClass("hide");
-            }
-          );
+          $familyClick.slideToggle();
         });
         $life.click(function () {
           $familyClick.css({ display: "none" });
-          $lifeClick.slideToggle(
-            function () {
-              $lifeClick.addClass("show");
-            },
-            function () {
-              $lifeClick.addClass("hide");
-            }
-          );
+          $lifeClick.slideToggle();
         });
         // =============================
       } else {
@@ -171,19 +162,23 @@ $(document).ready(function () {
         $(this).removeClass("exit");
         // 다른애들 끄기
         $(".playWrap").css({ display: "block" });
-        $(".slick-dots").css({ display: "block" });
-        $(".dropDownSection").css({ display: "block" });
+        // $(".slick-dots").css({ display: "block" });
+        // $(".dropDownSection").css({ display: "block" });
+        // $(".videoSection").css({ display: "block" });
+        $("#header").removeClass("headerFixed");
+        $("body").css({ overflow: "auto", height: "auto" });
+
         // 다른애들 끄기
         onOff = true;
       }
     });
   });
   // 마우스 스크롤 & 터치 막기
-  $(".MediaNavWrap").on("scroll touchmove mousewheel", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    return false;
-  });
+  // $(".MediaNavWrap").on("scroll touchmove mousewheel", function (event) {
+  //   event.preventDefault();
+  //   event.stopPropagation();
+  //   return false;
+  // });
   // 마우스 스크롤 & 터치 막기
 
   // media에 따른 bar 크기 관리
@@ -229,12 +224,12 @@ $(document).ready(function () {
   }
 
   // ---------------mouse enter---------------------
-  $("ul li").mouseenter(function () {
+  $(".headerWrap>ul li").mouseenter(function () {
     hoverFun(true);
   });
   $(".mtFam, .mtLife").mouseenter(function () {
     $(".deepMenuOn").css({
-      height: "100px",
+      height: "30px",
       transition: "height 0.35s ease",
       "border-top": "1px solid #d9d9d9",
     });
@@ -328,7 +323,8 @@ $(document).ready(function () {
     speed: 500,
     fade: true,
     cssEase: "linear",
-    arrow: false,
+    prevArrow: false,
+    nextArrow: false,
     autoplay: false,
     autoplaySpeed: 15000,
   });
